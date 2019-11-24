@@ -225,7 +225,7 @@
     <!--==========================
       About Us Section
     ============================-->
-    <section id="about">
+    <section id="about" class="section-bg">
       <div class="container">
 
         <header class="section-header">
@@ -269,7 +269,7 @@
               </div>
               <h2 class="title"><a href="#">V&iacute;deo</a></h2>
               <p>
-                Grabamos y editamos reportajes de v&iacute;deo
+                Grabamos y editamos diferentes tipos de v&iacute;deo
               </p>
             </div>
           </div>
@@ -286,12 +286,12 @@
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-ios-speedometer"></i></div>
             <h4 class="title">Rapidez</h4>
-            <p class="description">Te entregamos el trabajo realizado en poco tiempo blah blah</p>
+            <p class="description">No nos gusta hacerte esperar.<br/>Te entregamos tus fotos en 10 - 15 días y tus vídeos en un máximo de 30 días</p>
           </div>
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-chatboxes"></i></div>
             <h4 class="title">Comunicación</h4>
-            <p class="description">La base de todo buen trabajo es una buena comunicación, podrás contactar con nosotros en cualquier momento para definir o modificar los detalles de la faena</p>
+            <p class="description">La base de todo buen trabajo es una buena comunicación. Contacta con nosotros en cualquier momento si necesitas asesoramiento o resolver alguna duda</p>
           </div>
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-arrow-expand"></i></div>
@@ -301,7 +301,7 @@
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-levels"></i></div>
             <h4 class="title">Flexibilidad</h4>
-            <p class="description">Nos adaptamos a tus necesidades, y si tienes dudas podemos asesorarte blah blah</p>
+            <p class="description">Nos adaptamos a tus necesidades:<br/>horarios, fechas, sesiones a domicilio, desplazamiento por la zona metropolitana de Barcelona</p>
           </div>
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-images"></i></div>
@@ -709,11 +709,11 @@
 
           <div class="col-md-4">
             <div class="contact-email">
-              <a href="mailto:4gatosphotovideo@gmail.com">
+              <a href="mailto:info@4gatosphotovideo.com">
                 <i class="ion-ios-email-outline"></i>
               </a>
-              <a href="mailto:4gatosphotovideo@gmail.com"><h3>Email</h3></a>
-              <a href="mailto:4gatosphotovideo@gmail.com"><p>4gatosphotovideo@gmail.com</p></a>
+              <a href="mailto:info@4gatosphotovideo.com"><h3>Email</h3></a>
+              <a href="mailto:info@4gatosphotovideo.com"><p>info@4gatosphotovideo.com</p></a>
             </div>
           </div>
 
@@ -721,8 +721,8 @@
 
         <div class="form">
           <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
+          <div id="errormessage">Error!</div>
+          <form action="https://formcarry.com/s/s-pSWJw2VG0" method="post" role="form" class="contactForm">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -741,6 +741,7 @@
               <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
               <div class="validation"></div>
             </div>
+            <input type="hidden" name="_gotcha">
             <div class="text-center"><button type="submit">Send Message</button></div>
           </form>
         </div>
