@@ -92,18 +92,19 @@ jQuery(document).ready(function($) {
     else var str = $(this).serialize();
     $.ajax({
       type: "POST",
-      url: "contactform/contactform.php",
+      url: "https://formcarry.com/s/s-pSWJw2VG0",
       data: str,
-      success: function(msg) {
-        // alert(msg);
-        if (msg == 'OK') {
+      dataType: "json",
+      success: function(response) {
+        console.log(response);
+        if (response.status == "success") {
           $("#sendmessage").addClass("show");
           $("#errormessage").removeClass("show");
           $('.contactForm').find("input, textarea").val("");
         } else {
           $("#sendmessage").removeClass("show");
           $("#errormessage").addClass("show");
-          $('#errormessage').html(msg);
+          $('#errormessage').html(response);
         }
 
       }
