@@ -2,6 +2,9 @@ jQuery(document).ready(function($) {
   "use strict";
 
   //Contact
+  $('.close-form-message').click(function(){
+    $(this).parent().removeClass("show");
+  });
   $('form.contactForm').submit(function() {
     var f = $(this).find('.form-group'),
       ferror = false,
@@ -106,7 +109,6 @@ jQuery(document).ready(function($) {
           $("#errormessage").addClass("show");
           $('#errormessage').html(response);
         }
-
       }
     });
     return false;
