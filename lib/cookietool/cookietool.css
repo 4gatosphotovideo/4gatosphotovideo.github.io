@@ -1,12 +1,17 @@
 .cookietool-message {
+	z-index: 1000;
 	position: fixed;
 	width: 100%;
-	padding: .5em;
+	padding: 1em;
 	text-align: center;
 
-	background: #F4FF74;
+	background: #000;
 	border: 0 solid #9AA704;
-	color: #444;
+	color: #EEE;
+}
+.cookietool-message .detail{
+	color: #999;
+    font-size: .8em;
 }
 
 .cookietool-message-top {
