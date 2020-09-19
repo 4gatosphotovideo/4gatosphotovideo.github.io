@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+.shadowed {
+    -webkit-filter: drop-shadow(-5px 5px 5px #111);
+    filter: drop-shadow(-5px 5px 5px #111);
+}
+
+.spacer{
+    margin-top: 5em;
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+        // height: 90%;
+        // width: 90%;
+    } 
+    100% { 
+        opacity: 1;
+        // height: 100%;
+        // width: 100%;
+    } 
+} 
+
+/* GLOBAL VARIABLES */
+:root {
+    --min-width: 355px;
+    --green: #b5e6a2;
+    --black-trans: rgba(0, 0, 0, 0.9);
+  }
