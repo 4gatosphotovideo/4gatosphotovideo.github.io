@@ -5,7 +5,7 @@
 }
 #intro img {
     max-height: 100%; 
-    min-width: var(--min-width); 
+    // min-width: var(--min-width); 
     max-width: 100%; 
     position: absolute;  
     top: 0;  
@@ -13,8 +13,43 @@
     left: 0;  
     right: 0;  
     margin: auto;
-    animation: fadeInAnimation ease 3s; 
+    animation: fadeInAnimation ease 5s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
   }
 
+  .arrow {
+    text-align: center;
+    margin-top: -25px;
+    padding:0px;
+    a { 
+      color: black; 
+      text-decoration: none;
+    }
+  }
+  .arrow.scrolled{
+    display: none;
+  }
+
+  .arrow-icon{
+    padding: 2em;
+  }
+  
+
+  .bounce {
+    -moz-animation: bounce 3s infinite;
+    -webkit-animation: bounce 3s infinite;
+    animation: bounce 3s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }

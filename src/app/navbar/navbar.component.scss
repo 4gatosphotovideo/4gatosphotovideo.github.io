@@ -2,12 +2,25 @@
     background-color: transparent !important;
     transition: all 0.5s;
     padding: .5em 3em;
-    min-width: 355px;
+    // min-width: 355px;
+}
+
+.navbar-brand > img {
+    height: 50px;
+    transition: all 0.5s;
+}
+
+.navbar-toggler:focus{
+    outline: none;
 }
 
 .scrolled{
     background-color: var(--black-trans) !important;
     transition: all 0.5s;
+    .navbar-brand > img {
+        height: 35px;
+        transition: all 0.5s;
+    }
 }
 
 .dropdown-menu {
@@ -21,6 +34,14 @@
     color: white !important;
     background-color: transparent !important;
 }
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+    .navbar-brand > img {
+        height: 35px;
+        transition: all 0.5s;
+    }
+}
+
 @media(min-width: 768px){
     .dropdown-menu {
         margin-top: 1em;
@@ -29,6 +50,7 @@
 }
 
 @media (max-width: 767px){
+    
     .dropdown-menu {
         text-align: right;
         float: right!important;
@@ -46,12 +68,31 @@
 
 .nav-item{
     text-align: right;
+    margin-left: .5em;
 }
 
 .navbar-toggler-icon {
+    transition: all 0.1s;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
+}
+
+.navbar-toggler[aria-expanded="true"]>.navbar-toggler-icon,
+.navbar-toggler[aria-expanded="true"]:focus>.navbar-toggler-icon {
+    transition: all 0.1s;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='m 5 6 l 21 20 m -21 0 l 20 -20'/%3e%3c/svg%3e ");
+}
   
  .navbar-toggler {
     border: none;
-  } 
+  }
+
+  .nav-link {
+    // padding: 0 8px 10px 8px;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    outline: none;
+  }

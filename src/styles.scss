@@ -1,4 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+/* GLOBAL VARIABLES */
+:root {
+    --min-width: 355px;
+    --green: #b5e6a2;
+    --green-active: #18d26e;
+  
 
 .shadowed {
     -webkit-filter: drop-shadow(-5px 5px 5px #111);
@@ -14,7 +19,7 @@
         opacity: 0; 
         // height: 90%;
         // width: 90%;
-    } 
+    }
     100% { 
         opacity: 1;
         // height: 100%;
@@ -22,9 +27,56 @@
     } 
 } 
 
-/* GLOBAL VARIABLES */
-:root {
-    --min-width: 355px;
-    --green: #b5e6a2;
-    --black-trans: rgba(0, 0, 0, 0.9);
+  --black-trans: rgba(0, 0, 0, 0.9);
   }
+
+  .section-header h3 {
+    font-size: 32px;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+    padding-top: 10vh;
+}
+
+.section-header h3::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #bbb;
+    bottom: 1px;
+    left: calc(50% - 100px);
+}
+.section-header h3::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--green-active);
+    bottom: 0;
+    left: calc(50% - 30px);
+}
+
+.section-header p {
+    text-align: center;
+    padding-bottom: 30px;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: #666666;
+    font-family: "Open Sans", sans-serif;
+}
