@@ -7,13 +7,23 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { IntroComponent } from './intro/intro.component';
 import { AboutComponent } from './about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GalleryPhotoComponent } from './gallery-photo/gallery-photo.component';
+import { GalleryVideoComponent } from './gallery-video/gallery-video.component';
+import { TariffsComponent } from './tariffs/tariffs.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     IntroComponent,
-    AboutComponent
+    AboutComponent,
+    GalleryPhotoComponent,
+    GalleryVideoComponent,
+    TariffsComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
