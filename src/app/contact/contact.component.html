@@ -1,42 +1,124 @@
 <section id="contact">
-    <div class="container">
-      <div class="section-header">
-        <h3>CONTACTO</h3>
-        <p>
-          <strong>4Gatos Photo&amp;Video</strong> es una pequeña empresa que
-          ofrece servicios de fotografía y vídeo con un toque fresco y moderno.
-        </p>
-      </div>
-  
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
-      <p>contact works!</p>
+  <div class="container">
+    <div class="section-header">
+      <h3>CONTACTO</h3>
+      <p>
+        Si estás interesado en contratar nuestros servicios, no dudes en
+        contactar con nosotros
+      </p>
     </div>
-  </section>
-  
+
+    <div class="row contact-info">
+      <div class="col-md-4 text-center mb-5">
+        <a target="blank" href="https://goo.gl/maps/qCiMqB3evfDix6b49">
+          <fa-icon
+            [icon]="faLocation"
+            size="2x"
+            [styles]="{ color: 'green' }"
+          ></fa-icon>
+          <h3>Dirección</h3>
+          <address>08940, Cornellà de Llobregat</address>
+        </a>
+      </div>
+
+      <div class="col-md-4 text-center mb-5">
+        <a target="blank" href="tel:+34600688860">
+          <fa-icon
+            [icon]="faPhone"
+            size="2x"
+            [styles]="{ color: 'green' }"
+          ></fa-icon>
+        </a>
+        <a
+          target="blank"
+          href="https://api.whatsapp.com/send?phone=34600688860&amp;text=Hola!%20Quiero%20contratar%20un%20reportaje%20con%204Gatos%20photo%20video"
+        >
+          <fa-icon
+            [icon]="faWhatsapp"
+            size="2x"
+            [styles]="{ color: 'green' }"
+          ></fa-icon>
+        </a>
+        <h3>Teléfono</h3>
+        <p>600 688 860</p>
+      </div>
+
+      <div class="col-md-4 text-center mb-5">
+        <a target="blank" href="mailto:info@4gatosphotovideo.com">
+          <fa-icon
+            [icon]="faMail"
+            size="2x"
+            [styles]="{ color: 'green' }"
+          ></fa-icon>
+          <h3>Email</h3>
+          <p>info@4gatosphotovideo.com</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="form">
+      <!-- <div id="sendmessage" class="p-4">
+        <i class="fa fa-window-close close-form-message"></i>
+        Hemos recibido tu mensaje, en breve nos comunicaremos contigo.<br />¡Muchas
+        gracias!
+      </div>
+      <div id="errormessage" class="p-4">
+        <i class="fa fa-window-close close-form-message"></i>
+        <span class="error-text"></span>
+      </div> -->
+      <form action="" method="post" role="form" id="contact-form">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="name"
+              placeholder="Tu nombre"
+              data-rule-required="true"
+              data-msg-required="Por favor introduzca al menos 4 caracteres"
+            />
+            <div class="validation"></div>
+          </div>
+          <div class="form-group col-md-6">
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              id="email"
+              placeholder="Tu Email"
+              data-rule="email"
+              data-msg="Por favor introduzca un email válido"
+            />
+            <div class="validation"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="subject"
+            id="subject"
+            placeholder="Asunto"
+            data-rule="minlen:4"
+            data-msg="Por favor introduzca al menos 8 caracteres"
+          />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group">
+          <textarea
+            class="form-control"
+            name="message"
+            rows="5"
+            data-rule="required"
+            data-msg="Por favor, escríbenos un mensaje"
+            placeholder="Mensaje"
+          ></textarea>
+          <div class="validation"></div>
+        </div>
+        <input type="hidden" name="_gotcha" />
+        <div class="text-center"><input type="submit" value="Enviar"/></div>
+      </form>
+    </div>
+  </div>
+</section>

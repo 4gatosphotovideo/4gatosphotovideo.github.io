@@ -10,12 +10,9 @@ declare var $: any;
 })
 export class NavbarComponent implements OnInit {
 
-
-
   headerScrolled: String = "";
 
   constructor() { }
-
 
   ngOnInit(): void {
 
@@ -32,7 +29,6 @@ export class NavbarComponent implements OnInit {
     });
 
     $('.arrow>a, .navbar-brand, .nav-link:not(.dropdown-toggle)').on('click', function () {
-      if (!(window.pageYOffset > 50)) $(".navbar").removeClass("scrolled");
       $('.navbar-collapse').collapse('hide');
       $('.dropdown-menu').collapse('hide');
     });
@@ -48,19 +44,12 @@ export class NavbarComponent implements OnInit {
       .not('[href="#"]')
       .not('[href="#0"]')
       .on('click', function (event) {
-
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
-
-          // Store hash
           var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          // - 70 is the offset/top margin
           $('html, body').animate({ scrollTop: $(hash).offset().top - 60 }, 1200, 'easeInOutExpo');
           return false;
-        } // End if
+        }
       });
   }
 
@@ -70,7 +59,8 @@ export class NavbarComponent implements OnInit {
   }
 
   private checkNavbarStatus() {
-    this.headerScrolled = (window.pageYOffset > 50) ? "scrolled" : "";
+    var isExpanded = ($(".navbar-toggler").attr("aria-expanded")) == 'true';
+    this.headerScrolled = (isExpanded || window.pageYOffset > 50) ? "scrolled" : "";
   }
 
 }

@@ -1,0 +1,23 @@
+#contact{
+    background-color: var(--green);
+
+    .contact-info{
+        a{
+            text-decoration: none;
+        }
+        h3{
+            font-size: 18px;
+            margin: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #777;
+        }
+        address, p{
+            color: black;
+        }
+        .ng-fa-icon{
+            padding: 1em;
+        }
+    }
+    
+}
