@@ -10,7 +10,7 @@ declare var $: any;
 })
 export class NavbarComponent implements OnInit {
 
-  
+
 
   headerScrolled: String = "";
 
@@ -22,39 +22,46 @@ export class NavbarComponent implements OnInit {
     $(window).on("load", function () {
 
       var urlHash = window.location.href.split("#")[1];
-  
-      if (urlHash &&  $('#' + urlHash).length) {
-          $('html,body').animate({
-              scrollTop: $('#' + urlHash).offset().top - 60
-          }, 1200, 'easeInOutExpo');
-          history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
-      }
-  });
 
-  $('.nav-link:not(.dropdown-toggle)').on('click',function() {
-    $('.navbar-collapse').collapse('hide');
-    $('.dropdown-menu').collapse('hide');
-  });
+      if (urlHash && $('#' + urlHash).length) {
+        $('html,body').animate({
+          scrollTop: $('#' + urlHash).offset().top - 60
+        }, 1200, 'easeInOutExpo');
+        history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+      }
+    });
+
+    $('.arrow>a, .navbar-brand, .nav-link:not(.dropdown-toggle)').on('click', function () {
+      if (!(window.pageYOffset > 50)) $(".navbar").removeClass("scrolled");
+      $('.navbar-collapse').collapse('hide');
+      $('.dropdown-menu').collapse('hide');
+    });
+
+    $('.navbar-toggler').on('click', function () {
+      var isExpanded = ($(".navbar-toggler").attr("aria-expanded")) == 'false';
+      if (isExpanded) $(".navbar").addClass("scrolled");
+      else if (!(window.pageYOffset > 50)) $(".navbar").removeClass("scrolled");
+    });
 
     $('a[href*="#"]')
-// Remove links that don't actually link to anything
-.not('[href="#"]')
-.not('[href="#0"]')
-.on('click', function(event) {   
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .on('click', function (event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
 
-        // Store hash
-        var hash = this.hash;
+          // Store hash
+          var hash = this.hash;
 
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        // - 70 is the offset/top margin
-        $('html, body').animate({scrollTop: $(hash).offset().top - 60}, 1200, 'easeInOutExpo');
-        return false;    
-    } // End if
-});
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          // - 70 is the offset/top margin
+          $('html, body').animate({ scrollTop: $(hash).offset().top - 60 }, 1200, 'easeInOutExpo');
+          return false;
+        } // End if
+      });
   }
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
@@ -62,8 +69,8 @@ export class NavbarComponent implements OnInit {
     this.checkNavbarStatus();
   }
 
-  private checkNavbarStatus(){
-    this.headerScrolled=(window.pageYOffset>50)?"scrolled":"";
+  private checkNavbarStatus() {
+    this.headerScrolled = (window.pageYOffset > 50) ? "scrolled" : "";
   }
 
 }
