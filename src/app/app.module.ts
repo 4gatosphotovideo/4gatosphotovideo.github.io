@@ -12,6 +12,9 @@ import { GalleryVideoComponent } from './gallery-video/gallery-video.component';
 import { TariffsComponent } from './tariffs/tariffs.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    NgxMasonryModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
