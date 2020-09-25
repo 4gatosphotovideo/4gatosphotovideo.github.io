@@ -28,9 +28,7 @@
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
     "jquery.easing": "^1.4.1",
-    "masonry-layout": "^4.2.2",
-    "ngx-lightbox": "^2.2.2",
-    "ngx-masonry": "^10.0.6",
+    "nanogallery2": "^3.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

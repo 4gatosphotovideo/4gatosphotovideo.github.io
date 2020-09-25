@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgxMasonryOptions, NgxMasonryComponent } from 'ngx-masonry';
-import { Lightbox } from 'ngx-lightbox';
+import { Component, OnInit } from '@angular/core';
 
+// jQuery
+declare var $: any;
 
 @Component({
   selector: 'app-gallery-photo',
@@ -10,62 +10,49 @@ import { Lightbox } from 'ngx-lightbox';
 })
 export class GalleryPhotoComponent implements OnInit {
 
-  public masonryOptions: NgxMasonryOptions = {
-    gutter: 20,
-    fitWidth: true
-  };
-
-  @ViewChild(NgxMasonryComponent) masonry: NgxMasonryComponent;
-
-  categories = [
-    {label:"Bebés", value:"bebes"},
-    {label:"Comunión", value:"comunion"},
-    {label:"Embarazo", value:"embarazo"},
-    {label:"Navidad", value:"navidad"},
-    {label:"Newborn", value:"newborn"},
-    {label:"Smashcake", value:"smashcake"},
-  ]
-
-  masonryImages = [];
-
-  constructor(private _lightbox: Lightbox) {}
-
-  open(index: number): void {
-    // open lightbox
-    this._lightbox.open(this.masonryImages, index);
-  }
- 
-  close(): void {
-    // close lightbox programmatically
-    this._lightbox.close();
-  }
+  constructor() {}
 
   pictures = [
-    {src:'assets/img/gallery/embarazo/1.jpg',thumb:'assets/img/gallery/embarazo/1.jpg',category:"embarazo"},
-    {src:'assets/img/gallery/navidad/1.jpg',thumb:'assets/img/gallery/navidad/1.jpg',category:"navidad"},
-    {src:'assets/img/gallery/bebes/1.jpg',thumb:'assets/img/gallery/bebes/1.jpg',category:"bebes"},
-    {src:'assets/img/gallery/comunion/1.jpg',thumb:'assets/img/gallery/comunion/1.jpg',category:"comunion"},
-    {src:'assets/img/gallery/newborn/1.jpg',thumb:'assets/img/gallery/newborn/1.jpg',category:"newborn"},
-    {src:'assets/img/gallery/smashcake/1.jpg',thumb:'assets/img/gallery/smashcake/1.jpg',category:"smashcake"},
-    {src:'assets/img/gallery/comunion/2.jpg',thumb:'assets/img/gallery/comunion/2.jpg',category:"comunion"},
-    {src:'assets/img/gallery/smashcake/2.jpg',thumb:'assets/img/gallery/smashcake/2.jpg',category:"smashcake"},
-    {src:'assets/img/gallery/smashcake/3.jpg',thumb:'assets/img/gallery/smashcake/3.jpg',category:"smashcake"},
-    {src:'assets/img/gallery/smashcake/4.jpg',thumb:'assets/img/gallery/smashcake/4.jpg',category:"smashcake"},
-    {src:'assets/img/gallery/smashcake/5.jpg',thumb:'assets/img/gallery/smashcake/5.jpg',category:"smashcake"},
+    {src:'assets/img/gallery/embarazo/1.jpg',srct:'assets/img/gallery/embarazo/1.jpg',tags:"Embarazo"},
+    {src:'assets/img/gallery/navidad/1.jpg',srct:'assets/img/gallery/navidad/1.jpg',tags:"Navidad"},
+    {src:'assets/img/gallery/bebes/1.jpg',srct:'assets/img/gallery/bebes/1.jpg',tags:"Bebes"},
+    {src:'assets/img/gallery/comunion/1.jpg',srct:'assets/img/gallery/comunion/1.jpg',tags:"Comunion"},
+    {src:'assets/img/gallery/newborn/1.jpg',srct:'assets/img/gallery/newborn/1.jpg',tags:"Newborn"},
+    {src:'assets/img/gallery/smashcake/1.jpg',srct:'assets/img/gallery/smashcake/1.jpg',tags:"Smashcake"},
+    {src:'assets/img/gallery/comunion/2.jpg',srct:'assets/img/gallery/comunion/2.jpg',tags:"Comunion"},
+    {src:'assets/img/gallery/smashcake/2.jpg',srct:'assets/img/gallery/smashcake/2.jpg',tags:"Smashcake"},
+    {src:'assets/img/gallery/smashcake/3.jpg',srct:'assets/img/gallery/smashcake/3.jpg',tags:"Smashcake"},
+    {src:'assets/img/gallery/smashcake/4.jpg',srct:'assets/img/gallery/smashcake/4.jpg',tags:"Smashcake"},
+    {src:'assets/img/gallery/smashcake/5.jpg',srct:'assets/img/gallery/smashcake/5.jpg',tags:"Smashcake"},
   ];
 
   ngOnInit() {
-    this.masonryImages = this.pictures;
+    $("#nanogallery-photos").nanogallery2({
+      items: this.pictures,
+      galleryFilterTags: true,
+      locationHash: false,
+      thumbnailWidth: "200",
+      thumbnailHeight: "auto",
+      thumbnailBorderVertical: 0,
+      thumbnailBorderHorizontal: 0,
+      thumbnailDisplayTransition: "scaleUp",
+      thumbnailDisplayTransitionDuration: 500,
+      thumbnailLabel: {
+        position: "overImageOnBottom",
+        display: false
+      },
+      thumbnailHoverEffect2: "toolsAppear|imageSepiaOff",
+      thumbnailAlignment: "center",
+      thumbnailGutterWidth: 10,
+      thumbnailGutterHeight: 10,
+      displayBreadcrumb: false,
+      thumbnailOpenImage: true,
+      viewerTools:      {
+        topLeft:   "label",
+        topRight:  "playPauseButton, zoomButton, fullscreenButton, closeButton"
+      }
+    });
   }
 
-  filterByCategory(category){
-    this.masonryImages = category?this.pictures.filter(i => i.category==category):this.pictures;
-    this.masonry.reloadItems()
-    this.masonry.layout();
-  }
-  
-  itemsLoaded() {
-    // console.log('itemsloaded');
-  }
   
 }

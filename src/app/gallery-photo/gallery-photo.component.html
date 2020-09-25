@@ -2,44 +2,7 @@
   <div class="container">
     <div class="section-header">
       <h3>Galería</h3>
-        <ul class="gallery-categories">
-          <li>
-            <button
-            type="button"
-            class="btn btn-outline-success"
-            (click)="filterByCategory('')"
-          >
-            Todas
-          </button>
-          </li>
-          <li *ngFor="let category of categories">
-            <button
-            type="button"
-            class="btn btn-success"
-            (click)="filterByCategory(category.value)"
-          >
-            {{ category.label }}
-          </button>
-          </li>
-        </ul>
     </div>
-
-    <div class="masonry-demo">
-      <ngx-masonry
-        [options]="masonryOptions"
-        style="width: 100%"
-        [ordered]="true"
-        (itemsLoaded)="itemsLoaded()"
-        class="grid"
-      >
-        <div
-          ngxMasonryItem
-          *ngFor="let image of masonryImages; index as idx"
-          class="gallery-item"
-        >
-          <img [src]="image.thumb" width="250" (click)="open(idx)" />
-        </div>
-      </ngx-masonry>
-    </div>
+    <div id="nanogallery-photos"></div>
   </div>
 </section>

@@ -27,14 +27,15 @@
               "src/favicon.png",
               "src/assets"
             ],
-            "styles": [
+          "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
-              "node_modules/ngx-lightbox/lightbox.css",
+              "src/assets/nanogallery2/nanogallery.css",
               "src/styles.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/nanogallery2/dist/jquery.nanogallery2.min.js",
               "node_modules/jquery.easing/jquery.easing.min.js"
             ]
           },

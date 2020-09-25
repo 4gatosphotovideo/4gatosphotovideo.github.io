@@ -13,8 +13,6 @@ import { TariffsComponent } from './tariffs/tariffs.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxMasonryModule } from 'ngx-masonry';
-import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -33,8 +31,6 @@ import { LightboxModule } from 'ngx-lightbox';
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    NgxMasonryModule,
-    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
