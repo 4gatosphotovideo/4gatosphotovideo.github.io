@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleDown as faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-intro',

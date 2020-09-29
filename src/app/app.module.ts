@@ -13,6 +13,23 @@ import { TariffsComponent } from './tariffs/tariffs.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
+
+const cookieConfig:NgcCookieConsentConfig = {
+  cookie: {
+    domain: 'localhost' // or 'your.domain.com' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
+  },
+  palette: {
+    popup: {
+      background: '#000'
+    },
+    button: {
+      background: 'green'
+    }
+  },
+  theme: 'edgeless',
+  type: 'opt-out'
+};
 
 @NgModule({
   declarations: [
@@ -31,6 +48,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-prod": "ng build --prod --base-href ./",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -26,9 +27,11 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@types/jquery": "^3.5.1",
     "bootstrap": "^4.5.2",
+    "cookieconsent": "^3.1.1",
     "jquery": "^3.5.1",
     "jquery.easing": "^1.4.1",
     "nanogallery2": "^3.0.3",
+    "ngx-cookieconsent": "^2.2.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

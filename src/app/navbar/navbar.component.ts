@@ -47,7 +47,9 @@ export class NavbarComponent implements OnInit {
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
           var hash = this.hash;
-          $('html, body').animate({ scrollTop: $(hash).offset().top - 60 }, 1200, 'easeInOutExpo');
+          var scrollOffset = $(hash).data("scroll-offset") || 60;
+          console.log(scrollOffset);
+          $('html, body').animate({ scrollTop: $(hash).offset().top - scrollOffset }, 1200, 'easeInOutExpo');
           return false;
         }
       });
