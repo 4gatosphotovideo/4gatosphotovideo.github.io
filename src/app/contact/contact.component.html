@@ -11,33 +11,19 @@
     <div class="row contact-info">
       <div class="col-md-4 text-center mb-5">
         <a target="blank" href="https://goo.gl/maps/qCiMqB3evfDix6b49">
-          <fa-icon
-            [icon]="faLocation"
-            size="2x"
-            [styles]="{ color: 'green' }"
-          ></fa-icon>
+          <fa-icon [icon]="faLocation" size="2x" [styles]="{ color: 'green' }"></fa-icon>
           <h3>Dirección</h3>
           <address>08940, Cornellà de Llobregat</address>
         </a>
       </div>
 
       <div class="col-md-4 text-center mb-5">
-        <a target="blank" href="tel:+34600688860">
-          <fa-icon
-            [icon]="faPhone"
-            size="2x"
-            [styles]="{ color: 'green' }"
-          ></fa-icon>
+        <a target="blank" href="tel:+34600688860" class="mr-2">
+          <fa-icon [icon]="faPhone" size="2x" [styles]="{ color: 'green' }"></fa-icon>
         </a>
-        <a
-          target="blank"
-          href="https://api.whatsapp.com/send?phone=34600688860&amp;text=Hola!%20Quiero%20contratar%20un%20reportaje%20con%204Gatos%20photo%20video"
-        >
-          <fa-icon
-            [icon]="faWhatsapp"
-            size="2x"
-            [styles]="{ color: 'green' }"
-          ></fa-icon>
+        <a target="blank" class="ml-2"
+          href="https://api.whatsapp.com/send?phone=34600688860&amp;text=Hola!%20Quiero%20contratar%20un%20reportaje%20con%204Gatos%20photo%20video">
+          <fa-icon [icon]="faWhatsapp" size="2x" [styles]="{ color: 'green' }"></fa-icon>
         </a>
         <h3>Teléfono</h3>
         <p>600 688 860</p>
@@ -45,11 +31,7 @@
 
       <div class="col-md-4 text-center mb-5">
         <a target="blank" href="mailto:info@4gatosphotovideo.com">
-          <fa-icon
-            [icon]="faMail"
-            size="2x"
-            [styles]="{ color: 'green' }"
-          ></fa-icon>
+          <fa-icon [icon]="faMail" size="2x" [styles]="{ color: 'green' }"></fa-icon>
           <h3>Email</h3>
           <p>info@4gatosphotovideo.com</p>
         </a>
@@ -57,67 +39,54 @@
     </div>
 
     <div class="form">
-      <!-- <div id="sendmessage" class="p-4">
-        <i class="fa fa-window-close close-form-message"></i>
-        Hemos recibido tu mensaje, en breve nos comunicaremos contigo.<br />¡Muchas
-        gracias!
-      </div>
-      <div id="errormessage" class="p-4">
-        <i class="fa fa-window-close close-form-message"></i>
-        <span class="error-text"></span>
-      </div> -->
-      <form action="" method="post" role="form" id="contact-form">
+      <form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
         <div class="form-row">
+
           <div class="form-group col-md-6">
-            <input
-              type="text"
-              name="name"
-              class="form-control"
-              id="name"
-              placeholder="Tu nombre"
-              data-rule-required="true"
-              data-msg-required="Por favor introduzca al menos 4 caracteres"
-            />
-            <div class="validation"></div>
+            <input type="text" class="form-control" id="name" placeholder="Tu nombre" formControlName="name" required
+              [ngClass]="(contactForm.get('name').dirty || contactForm.get('name').touched)?(!contactForm.get('name').valid?'is-invalid':'is-valid'):''" />
           </div>
+
           <div class="form-group col-md-6">
-            <input
-              type="email"
-              class="form-control"
-              name="email"
-              id="email"
-              placeholder="Tu Email"
-              data-rule="email"
-              data-msg="Por favor introduzca un email válido"
-            />
-            <div class="validation"></div>
+            <input type="email" class="form-control" formControlName="email" required id="email" placeholder="Tu Email"
+              [ngClass]="(contactForm.get('email').dirty || contactForm.get('email').touched)?(!contactForm.get('email').valid?'is-invalid':'is-valid'):''" />
           </div>
+
         </div>
+
         <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            name="subject"
-            id="subject"
-            placeholder="Asunto"
-            data-rule="minlen:4"
-            data-msg="Por favor introduzca al menos 8 caracteres"
-          />
-          <div class="validation"></div>
+          <textarea class="form-control" formControlName="message" required rows="5" placeholder="Mensaje"
+            [ngClass]="(contactForm.get('message').dirty || contactForm.get('message').touched)?(!contactForm.get('message').valid?'is-invalid':'is-valid'):''"></textarea>
         </div>
-        <div class="form-group">
-          <textarea
-            class="form-control"
-            name="message"
-            rows="5"
-            data-rule="required"
-            data-msg="Por favor, escríbenos un mensaje"
-            placeholder="Mensaje"
-          ></textarea>
-          <div class="validation"></div>
+
+        <input type="hidden" formControlName="_gotcha" />
+
+        <div class="text-center">
+          <div *ngIf="formSent" class="alert alert-light alert-dismissible fade show" role="alert">
+            <strong>¡Gracias por contactar!</strong> <br />
+            Nos pondremos en contacto contigo en la mayor brevedad posible
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div *ngIf="formError" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Se ha producido un error al enviar el formulario</strong> <br />
+            Por favor, contacta con nosotros por correo electrónico, teléfono o a través de nuestras redes sociales
+            <br />
+            Disculpa las molestias
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <button type="submit" class="btn btn-success" [disabled]="!contactForm.valid || formSending">
+            <div *ngIf="formSending" class="spinner-border spinner-border-sm" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            Enviar
+          </button>
         </div>
-        <input type="hidden" name="_gotcha" />
-        <div class="text-center"><input type="submit" value="Enviar"/></div>
+
       </form>
     </div>
   </div>
