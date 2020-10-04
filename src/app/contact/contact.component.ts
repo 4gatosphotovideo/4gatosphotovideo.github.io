@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { faMapMarkerAlt, faPhoneAlt as faPhone, faEnvelope as faMail } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-
 
 // jQuery
 declare var $: any;
@@ -15,8 +14,6 @@ declare var $: any;
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
-
 
   faLocation = faMapMarkerAlt;
   faPhone = faPhone;
@@ -61,7 +58,6 @@ export class ContactComponent implements OnInit {
         }
       );
     }
-
   }
 
 }

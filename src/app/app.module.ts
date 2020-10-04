@@ -11,11 +11,13 @@ import { AboutComponent } from './about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GalleryPhotoComponent } from './gallery-photo/gallery-photo.component';
 import { GalleryVideoComponent } from './gallery-video/gallery-video.component';
-import { TariffsComponent } from './tariffs/tariffs.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
+import { TariffComponent } from './services/tariff/tariff.component';
+import { ServicesComponent } from './services/services.component';
+import { ReplaceSpacesURL } from './shared/pipe/replaceSpacesURL';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -41,9 +43,11 @@ const cookieConfig:NgcCookieConsentConfig = {
     AboutComponent,
     GalleryPhotoComponent,
     GalleryVideoComponent,
-    TariffsComponent,
+    ServicesComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    TariffComponent,
+    ReplaceSpacesURL
   ],
   imports: [
     BrowserModule,
