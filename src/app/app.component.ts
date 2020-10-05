@@ -1,6 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgcCookieConsentService, NgcInitializeEvent, NgcNoCookieLawEvent, NgcStatusChangeEvent } from 'ngx-cookieconsent';
 import { Subscription } from 'rxjs';
+import { faEnvelope as faCookie } from '@fortawesome/free-solid-svg-icons';
+import { environment } from 'src/environments/environment';
+
+declare var $: any;
+declare var gtag: any;
 
 @Component({
   selector: 'app-root',
@@ -10,63 +15,42 @@ import { Subscription } from 'rxjs';
 export class AppComponent implements OnInit, OnDestroy {
 
   title = '4gatosphotovideo';
-
+  faCookie = faCookie;
   //keep refs to subscriptions to be able to unsubscribe later
-  private popupOpenSubscription: Subscription;
-  private popupCloseSubscription: Subscription;
-  private initializeSubscription: Subscription;
   private statusChangeSubscription: Subscription;
-  private revokeChoiceSubscription: Subscription;
-  private noCookieLawSubscription: Subscription;
 
-  constructor(private ccService: NgcCookieConsentService){}
+  constructor(private ccService: NgcCookieConsentService) { }
 
   ngOnInit(): void {
-     // subscribe to cookieconsent observables to react to main events
-     this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(
-      () => {
-        // you can use this.ccService.getConfig() to do stuff...
-      });
- 
-    this.popupCloseSubscription = this.ccService.popupClose$.subscribe(
-      () => {
-        // you can use this.ccService.getConfig() to do stuff...
-      });
- 
-    this.initializeSubscription = this.ccService.initialize$.subscribe(
-      (event: NgcInitializeEvent) => {
-        // you can use this.ccService.getConfig() to do stuff...
-        
-      });
- 
+
+    $('a[href*="#cookie"]').on('click', function (event) {
+      $("#modalCookiePolicy").modal("show");
+      return false;
+    });
+
+    if (this.ccService.hasConsented()) {
+      this.callGoogleAnalytics();
+    }
+
     this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
       (event: NgcStatusChangeEvent) => {
-        // you can use this.ccService.getConfig() to do stuff...
-        console.log("initialize");
-        console.log(this.ccService.getStatus());
+        if (this.ccService.hasConsented()) {
+          this.callGoogleAnalytics();
+        }
       });
- 
-    this.revokeChoiceSubscription = this.ccService.revokeChoice$.subscribe(
-      () => {
-        // you can use this.ccService.getConfig() to do stuff...
-        console.log("revoke");
-        console.log(this.ccService.getStatus());
-      });
- 
-      this.noCookieLawSubscription = this.ccService.noCookieLaw$.subscribe(
-      (event: NgcNoCookieLawEvent) => {
-        // you can use this.ccService.getConfig() to do stuff...
-      });
+
   }
   ngOnDestroy(): void {
     // unsubscribe to cookieconsent observables to prevent memory leaks
-    this.popupOpenSubscription.unsubscribe();
-    this.popupCloseSubscription.unsubscribe();
-    this.initializeSubscription.unsubscribe();
     this.statusChangeSubscription.unsubscribe();
-    this.revokeChoiceSubscription.unsubscribe();
-    this.noCookieLawSubscription.unsubscribe();
   }
-  
-  
+
+  private callGoogleAnalytics() {
+    if (environment.production) {
+      gtag('config', 'UA-155184351-1');
+    }
+
+  }
+
+
 }

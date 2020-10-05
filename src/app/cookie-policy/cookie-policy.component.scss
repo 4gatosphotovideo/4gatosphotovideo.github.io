@@ -1,0 +1,26 @@
+#modalCookiePolicy{
+    z-index:9999;
+}
+.modal-dialog {
+    max-width: 95%;
+    width: 95%;
+  }
+  .modal {
+    padding-right: 0px !important;
+  }
+  ul{
+    li{
+        list-style-type: none;
+    }
+  }
+  h2{
+      padding-top: 1em;
+  }
+  a{
+    text-decoration: underline;
+    font-weight: bold;
+    color: gray;
+  }
+  a:hover{
+    color: var(--green-active);
+}

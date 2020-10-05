@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
+declare var $: any;
 
 @Component({
   selector: 'app-footer',
@@ -15,6 +16,10 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $('a[href*="#legal"]').on('click', function (event) {
+      $("#modalLegal").modal('show');
+      return false;
+    });
   }
 
 }

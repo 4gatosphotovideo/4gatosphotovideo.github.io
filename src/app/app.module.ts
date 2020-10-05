@@ -18,6 +18,8 @@ import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent'
 import { TariffComponent } from './services/tariff/tariff.component';
 import { ServicesComponent } from './services/services.component';
 import { ReplaceSpacesURL } from './shared/pipe/replaceSpacesURL';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+import { LegalComponent } from './legal/legal.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -28,11 +30,20 @@ const cookieConfig:NgcCookieConsentConfig = {
       background: '#000'
     },
     button: {
-      background: 'green'
+      background: '#28a745'
     }
   },
-  theme: 'edgeless',
-  type: 'opt-out'
+  theme: 'classic',
+  type: 'opt-out',
+  content:{
+    message: 'Sí, esta web también utiliza cookies y nos obligan a que nos des tu consentimiento para usarlas y poder ofrecerte una mejor experiencia.<br/>Más información sobre nuestra ',
+    deny: "No quiero",
+    allow: "Aceptar",
+    link: "política de cookies",
+    href: "#cookie",
+    policy:"<i class=\"fas fa-cookie-bite fa-lg\" title=\"Cookies\"></i>",
+    target: "_self"
+  }
 };
 
 @NgModule({
@@ -47,7 +58,9 @@ const cookieConfig:NgcCookieConsentConfig = {
     ContactComponent,
     FooterComponent,
     TariffComponent,
-    ReplaceSpacesURL
+    ReplaceSpacesURL,
+    CookiePolicyComponent,
+    LegalComponent
   ],
   imports: [
     BrowserModule,

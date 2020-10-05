@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NgcCookieConsentService, NgcStatusChangeEvent } from 'ngx-cookieconsent';
+import { Subscription } from 'rxjs';
 // jQuery
 declare var $: any;
 
@@ -7,12 +9,14 @@ declare var $: any;
   templateUrl: './gallery-video.component.html',
   styleUrls: ['./gallery-video.component.scss']
 })
-export class GalleryVideoComponent implements OnInit {
+export class GalleryVideoComponent implements OnInit, OnDestroy {
 
   
-  
+  private statusChangeSubscription: Subscription;
 
-  constructor() {}
+  constructor(private ccService: NgcCookieConsentService) {
+    console.log
+  }
 
   videos = [
     {src:'https://www.youtube.com/watch?v=P41ARJy6y-c',srct:'http://i3.ytimg.com/vi/P41ARJy6y-c/hqdefault.jpg',title:'Comunión'},
@@ -20,6 +24,30 @@ export class GalleryVideoComponent implements OnInit {
   ];
 
   ngOnInit() {
+    
+    this.createGallery();
+    
+    this.statusChangeSubscription = this.ccService.statusChange$.subscribe(
+      (event: NgcStatusChangeEvent) => {
+        this.refreshGallery();
+      });
+  }
+
+  ngOnDestroy(): void {
+    // unsubscribe to cookieconsent observables to prevent memory leaks
+    this.statusChangeSubscription.unsubscribe();
+  }
+  
+  private showCookiesModal(){
+    $("#modalCookieVideo").modal("show");
+  }
+
+  private refreshGallery(){
+    $("#nanogallery-video").nanogallery2('destroy');
+    this.createGallery();
+  }
+
+  private createGallery(){
     $("#nanogallery-video").nanogallery2({
       items: this.videos,
       locationHash: false,
@@ -42,7 +70,8 @@ export class GalleryVideoComponent implements OnInit {
       viewerTools:      {
         topLeft:   "label",
         topRight:  "closeButton"
-      }
+      },
+      fnThumbnailOpen: this.ccService.hasConsented()? null : this.showCookiesModal
     });
   }
 

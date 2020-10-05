@@ -43,6 +43,8 @@ export class NavbarComponent implements OnInit {
       // Remove links that don't actually link to anything
       .not('[href="#"]')
       .not('[href="#0"]')
+      .not('[href="#cookie"]')
+      .not('[href="#legal"]')
       .on('click', function (event) {
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {

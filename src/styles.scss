@@ -23,7 +23,7 @@
   }
 }
 
-section{
+section {
   padding-bottom: 3em;
 }
 
@@ -80,4 +80,28 @@ body {
   background: #fff;
   color: #666666;
   font-family: "Open Sans", sans-serif;
+  
+  .cc-revoke.cc-bottom{
+    left: 0;
+    transform: none !important;
+    border-top: solid 1px var(--green-active);
+    border-right: solid 1px var(--green-active);
+    text-decoration: none;
+    i{
+      pointer-events: none;
+    }
+  }
+  
+  .cc-window {
+    z-index: 9998;
+    .cc-compliance {
+      .cc-allow:hover{
+        background-color: green;
+        text-decoration: none;
+      }
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
 }

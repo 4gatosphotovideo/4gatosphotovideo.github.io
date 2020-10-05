@@ -31,7 +31,7 @@
         <p *ngFor="let desc of service.description" [innerHTML]="desc"></p>
         <h1 class="price-tariff-title mt-5"><span>Tarifas</span></h1>
         <div class="row mt-5">
-          <div [class]="'col-lg-'+(12/service.tariffs.length)" *ngFor="let tariff of service.tariffs">
+          <div [class]="'col-md-'+(12/service.tariffs.length)" *ngFor="let tariff of service.tariffs">
             <div class="card tariff-card">
               <span class="price-tariff" [ngClass]="{'with-offer':tariff.offer}">
                 <span *ngIf="tariff.offer" class="old-price">{{tariff.price}}€<br /></span>
@@ -45,7 +45,7 @@
                   <ul class="price-tariff-details">
                     <li *ngFor="let feature of tariff.features">{{feature}}</li>
                   </ul>
-                  <span *ngIf="tariff.offer" class="offer-until">Oferta hasta el 32/13</span>
+                  <span *ngIf="tariff.offer" class="offer-until">Oferta hasta el {{tariff.offer.until}}</span>
                 </li>
                 <li class="list-group-item text-center">
                   <a class="btn btn-success" target="blank"

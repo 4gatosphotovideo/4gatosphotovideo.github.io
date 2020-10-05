@@ -1,0 +1,31 @@
+#modalLegal {
+  z-index: 9999;
+}
+.modal-dialog {
+  max-width: 95%;
+  width: 95%;
+}
+.modal {
+  padding-right: 0px !important;
+}
+
+h2 {
+  padding-top: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: gray;
+}
+a:hover {
+  color: var(--green-active);
+}
+p{
+  text-align: justify;
+}
