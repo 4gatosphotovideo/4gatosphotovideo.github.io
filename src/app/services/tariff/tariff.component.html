@@ -1,20 +1,22 @@
-<div class="card mx-auto">
-  <img class="card-img-top img-fluid" src="assets/img/services/{{service.name|lowercase}}.jpg"
-    onerror="this.src='/assets/img/services/placeholder.jpg';" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title text-center">{{service.name|uppercase}}</h5>
-    <p class="card-text">Desde <span class="price"
-        [ngClass]="{'old-price':getMinPrice(service).offer}">{{getMinPrice(service).price}}€</span>
-      <span class="price" *ngIf="getMinPrice(service).offer"> {{getMinPrice(service).offer.price}}€</span>
-      <span style="float: right;"><button type="button" class="btn btn-success" data-toggle="modal"
-          [attr.data-target]="'#modal'+service.name">
-          <fa-icon [icon]="faPlus"></fa-icon>
-        </button></span>
-      <span class="offer-until" *ngIf="getMinPrice(service).offer">Promo hasta el
-        {{getMinPrice(service).offer.until}}</span>
-    </p>
+
+  <div class="card service-card mx-auto">
+    <a href="#" data-toggle="modal" [attr.data-target]="'#modal'+service.name">
+      <img class="card-img-top img-fluid" src="assets/img/services/{{service.name|lowercase}}.jpg"
+      onerror="this.src='/assets/img/services/placeholder.jpg';" alt="Card image cap">
+    
+    <div class="card-body">
+      <h5 class="card-title text-center">{{service.name|uppercase}}</h5>
+      <p class="card-text">Desde <span class="price"
+          [ngClass]="{'old-price':getMinPrice(service).offer}">{{getMinPrice(service).price}}€</span>
+        <span class="price" *ngIf="getMinPrice(service).offer"> {{getMinPrice(service).offer.price}}€</span>
+        <span class="offer-until" *ngIf="getMinPrice(service).offer">Promo hasta el
+          {{getMinPrice(service).offer.until}}</span>
+      </p>
+    </div>
+  </a>
   </div>
-</div>
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="modal{{service.name}}" tabindex="-1" role="dialog" aria-hidden="true">

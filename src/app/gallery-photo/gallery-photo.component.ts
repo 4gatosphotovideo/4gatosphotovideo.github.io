@@ -10,23 +10,31 @@ declare var $: any;
 })
 export class GalleryPhotoComponent implements OnInit {
 
-  constructor() {}
+  categories: any[] = [
+    { name: "bebes", tag: "Bebés", files: 4 },
+    { name: "comunion", tag: "Comunión", files: 4 },
+    { name: "embarazo", tag: "Embarazo", files: 7 },
+    { name: "familias", tag: "Familias", files: 2 },
+    { name: "individual", tag: "Individual", files: 6 },
+    { name: "navidad", tag: "Navidad", files: 5 },
+    { name: "newborn", tag: "Newborn", files: 3 },
+    { name: "peques", tag: "Peques", files: 4 },
+    { name: "smashcake", tag: "Smashcake", files: 6 },
+  ]
 
-  pictures = [
-    {src:'assets/img/gallery/embarazo/1.jpg',srct:'assets/img/gallery/embarazo/1.jpg',tags:"Embarazo"},
-    {src:'assets/img/gallery/navidad/1.jpg',srct:'assets/img/gallery/navidad/1.jpg',tags:"Navidad"},
-    {src:'assets/img/gallery/bebes/1.jpg',srct:'assets/img/gallery/bebes/1.jpg',tags:"Bebes"},
-    {src:'assets/img/gallery/comunion/1.jpg',srct:'assets/img/gallery/comunion/1.jpg',tags:"Comunion"},
-    {src:'assets/img/gallery/newborn/1.jpg',srct:'assets/img/gallery/newborn/1.jpg',tags:"Newborn"},
-    {src:'assets/img/gallery/smashcake/1.jpg',srct:'assets/img/gallery/smashcake/1.jpg',tags:"Smashcake"},
-    {src:'assets/img/gallery/comunion/2.jpg',srct:'assets/img/gallery/comunion/2.jpg',tags:"Comunion"},
-    {src:'assets/img/gallery/smashcake/2.jpg',srct:'assets/img/gallery/smashcake/2.jpg',tags:"Smashcake"},
-    {src:'assets/img/gallery/smashcake/3.jpg',srct:'assets/img/gallery/smashcake/3.jpg',tags:"Smashcake"},
-    {src:'assets/img/gallery/smashcake/4.jpg',srct:'assets/img/gallery/smashcake/4.jpg',tags:"Smashcake"},
-    {src:'assets/img/gallery/smashcake/5.jpg',srct:'assets/img/gallery/smashcake/5.jpg',tags:"Smashcake"},
-  ];
+  pictures: any[] = [];
+
+  constructor() { }
 
   ngOnInit() {
+    // populate pictures array
+    this.categories.forEach((c, index) => {
+      for (var i = 1; i <= c.files; i++) {
+        var picturePath = "assets/img/gallery/" + c.name + "/" + i + ".jpg";
+        this.pictures.push({ src: picturePath, srct: picturePath, tags: c.tag });
+      }
+    });
+
     $("#nanogallery-photos").nanogallery2({
       items: this.pictures,
       galleryFilterTags: true,
@@ -36,7 +44,11 @@ export class GalleryPhotoComponent implements OnInit {
       thumbnailBorderVertical: 0,
       thumbnailBorderHorizontal: 0,
       thumbnailDisplayTransition: "scaleUp",
+      gallerySorting: "random",
       thumbnailDisplayTransitionDuration: 500,
+      galleryTheme: {
+        navigationFilter: { color: '#222', background: '#FFF', colorSelected: '#fff', backgroundSelected: '#18d26e', borderRadius: '4px' },
+      },
       thumbnailLabel: {
         position: "overImageOnBottom",
         display: false
@@ -47,12 +59,17 @@ export class GalleryPhotoComponent implements OnInit {
       thumbnailGutterHeight: 10,
       displayBreadcrumb: false,
       thumbnailOpenImage: true,
-      viewerTools:      {
-        topLeft:   "label",
-        topRight:  "playPauseButton, zoomButton, fullscreenButton, closeButton"
+      viewerTools: {
+        topLeft: "label",
+        topRight: "playPauseButton, zoomButton, fullscreenButton, closeButton"
+      },
+      icons:{
+        navigationFilterSelectedAll:'Todas',
+        navigationFilterUnselected:'',
+        navigationFilterSelected:''
       }
     });
   }
 
-  
+
 }

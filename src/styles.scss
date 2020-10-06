@@ -105,3 +105,15 @@ body {
     }
   }
 }
+
+.nanogallery_gallerytheme_custom_nanogallery-photos .nGY2NavFilterSelectAll{
+  color: #222 !important;
+  border: solid 1px var(--green-active);
+  
+  .nGY2Icon-ccw{
+    font-family: "Open Sans", sans-serif;
+  }
+  .nGY2Icon-ccw:after{
+    content: ' Todas';
+  }
+}
