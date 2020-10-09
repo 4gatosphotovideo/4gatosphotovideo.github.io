@@ -17,13 +17,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
 import { TariffComponent } from './services/tariff/tariff.component';
 import { ServicesComponent } from './services/services.component';
-import { ReplaceSpacesURL } from './shared/pipe/replaceSpacesURL';
+import { ReplaceSpacesURL } from './shared/pipe/ReplaceSpacesURL';
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { LegalComponent } from './legal/legal.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
-    domain: 'localhost' // or 'your.domain.com' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
+    domain: 'joseluislopez87.github.io' // or 'your.domain.com' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
   },
   palette: {
     popup: {

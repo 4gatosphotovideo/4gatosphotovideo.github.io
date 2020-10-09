@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NgcCookieConsentService, NgcInitializeEvent, NgcNoCookieLawEvent, NgcStatusChangeEvent } from 'ngx-cookieconsent';
+import { NgcCookieConsentService, NgcStatusChangeEvent } from 'ngx-cookieconsent';
 import { Subscription } from 'rxjs';
 import { faEnvelope as faCookie } from '@fortawesome/free-solid-svg-icons';
 import { environment } from 'src/environments/environment';

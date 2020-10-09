@@ -1,17 +1,17 @@
 
   <div class="card service-card mx-auto">
     <a href="#" data-toggle="modal" [attr.data-target]="'#modal'+service.name">
-      <img class="card-img-top img-fluid" src="assets/img/services/{{service.name|lowercase}}.jpg"
-      onerror="this.src='/assets/img/services/placeholder.jpg';" alt="Card image cap">
+      <img class="card-img-top img-fluid" src="assets/img/services/{{service.name|lowercase}}.jpg" alt="Card image cap">
     
     <div class="card-body">
-      <h5 class="card-title text-center">{{service.name|uppercase}}</h5>
-      <p class="card-text">Desde <span class="price"
+      <h5 class="card-title text-center">{{(service.thumbnailName?service.thumbnailName:service.name)|uppercase}}</h5>
+      <p *ngIf="service.tariffs" class="card-text">Desde <span class="price"
           [ngClass]="{'old-price':getMinPrice(service).offer}">{{getMinPrice(service).price}}€</span>
         <span class="price" *ngIf="getMinPrice(service).offer"> {{getMinPrice(service).offer.price}}€</span>
         <span class="offer-until" *ngIf="getMinPrice(service).offer">Promo hasta el
           {{getMinPrice(service).offer.until}}</span>
       </p>
+      <p *ngIf="!service.tariffs" class="card-text price">&nbsp;</p>
     </div>
   </a>
   </div>
@@ -31,8 +31,8 @@
       <div class="modal-body">
 
         <p *ngFor="let desc of service.description" [innerHTML]="desc"></p>
-        <h1 class="price-tariff-title mt-5"><span>Tarifas</span></h1>
-        <div class="row mt-5">
+        <h1 *ngIf="service.tariffs" class="price-tariff-title mt-5"><span>Tarifas</span></h1>
+        <div *ngIf="service.tariffs" class="row mt-5">
           <div [class]="'col-md-'+(12/service.tariffs.length)" *ngFor="let tariff of service.tariffs">
             <div class="card tariff-card">
               <span class="price-tariff" [ngClass]="{'with-offer':tariff.offer}">

@@ -19,8 +19,8 @@ export class GalleryVideoComponent implements OnInit, OnDestroy {
   }
 
   videos = [
-    {src:'https://www.youtube.com/watch?v=P41ARJy6y-c',srct:'http://i3.ytimg.com/vi/P41ARJy6y-c/hqdefault.jpg',title:'Comunión'},
-    {src:'https://www.youtube.com/watch?v=1Iq425psadE',srct:'http://i3.ytimg.com/vi/1Iq425psadE/hqdefault.jpg',title:'Vídeo resumen'}
+    {src:'https://www.youtube.com/watch?v=P41ARJy6y-c',srct:'http://i3.ytimg.com/vi/P41ARJy6y-c/hqdefault.jpg'},
+    {src:'https://www.youtube.com/watch?v=1Iq425psadE',srct:'http://i3.ytimg.com/vi/1Iq425psadE/hqdefault.jpg'}
   ];
 
   ngOnInit() {
