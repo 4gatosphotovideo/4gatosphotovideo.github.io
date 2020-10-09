@@ -23,7 +23,7 @@ import { LegalComponent } from './legal/legal.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
-    domain: 'joseluislopez87.github.io' // or 'your.domain.com' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
+    domain: '4gatosphotovideo.com' // or 'your.domain.com' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
   },
   palette: {
     popup: {
