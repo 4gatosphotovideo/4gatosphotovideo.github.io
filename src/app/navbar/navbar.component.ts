@@ -24,8 +24,14 @@ export class NavbarComponent implements OnInit {
         $('html,body').animate({
           scrollTop: $('#' + urlHash).offset().top - 60
         }, 1200, 'easeInOutExpo');
-        history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+
+      } else {
+        var serviceModalId = "#modal" + urlHash;
+        if ($(serviceModalId).length) {
+          $(serviceModalId).modal('show');
+        }
       }
+      history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
     });
 
     $('.arrow>a, .navbar-brand, .nav-link:not(.dropdown-toggle)').on('click', function () {
