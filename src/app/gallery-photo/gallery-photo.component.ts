@@ -11,15 +11,15 @@ declare var $: any;
 export class GalleryPhotoComponent implements OnInit {
 
   categories: any[] = [
-    { name: "bebes", tag: "Bebés", files: 4 },
-    { name: "comunion", tag: "Comunión", files: 4 },
     { name: "embarazo", tag: "Embarazo", files: 7 },
-    { name: "familias", tag: "Familias", files: 2 },
-    { name: "individual", tag: "Individual", files: 6 },
-    { name: "navidad", tag: "Navidad", files: 5 },
-    { name: "newborn", tag: "Newborn", files: 3 },
-    { name: "peques", tag: "Peques", files: 4 },
+    { name: "newborn", tag: "Newborn", files: 6 },
+    { name: "bebes", tag: "Bebés", files: 4 },
     { name: "smashcake", tag: "Smashcake", files: 6 },
+    { name: "peques", tag: "Peques", files: 4 },
+    { name: "familias", tag: "Familias", files: 3 },
+    { name: "comunion", tag: "Comunión", files: 4 },
+    { name: "navidad", tag: "Navidad", files: 6 },
+    { name: "individual", tag: "Individual", files: 6 }
   ]
 
   pictures: any[] = [];

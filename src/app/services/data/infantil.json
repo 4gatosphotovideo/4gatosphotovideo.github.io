@@ -5,5 +5,35 @@
         "<span class='font-weight-bold text-center'>¿Qué momento de la vida no es bueno para fotografiar a los peques?</span>",
         "¡Todos lo son! Porque cada día nos regalan un nuevo aprendizaje, una gran sonrisa o un fuerte abrazo.",
         "Las sesiones infantiles se pueden realizar desde el primer añito hasta los 12 años. Son sesiones personalizadas, que se pueden hacer en estudio, a domicilio o en exterior."
+    ],
+    "tariffs": [
+        {
+            "name": "Básica",
+            "features": [
+                "Duración: 1h",
+                "Incluye 20 fotos digitales"
+            ],
+            "price": 80
+        },
+        {
+            "name": "Estándar",
+            "features": [
+                "Duración: 1h",
+                "Incluye 30 fotos digitales",
+                "Álbum digital 15x15 de 26 páginas",
+                "Impresión en marco de madera 15x20"
+            ],
+            "price": 150
+        },
+        {
+            "name": "Plus",
+            "features": [
+                "Duración: 1h",
+                "Incluye 30 fotos digitales",
+                "Álbum digital 21x28 o 28x28 de 26 páginas",
+                "Impresión en marco de madera 30x40"
+            ],
+            "price": 200
+        }
     ]
 }

@@ -22,7 +22,7 @@ import infantil from "./data/infantil.json";
 })
 export class ServicesComponent implements OnInit {
 
-  services: Service[] = [newborn, familias, embarazo, bebes, bodas, individual, smashcake, comunion, navidad, empresa, eventos, infantil];
+  services: Service[] = [embarazo, newborn, bebes, smashcake, infantil, familias, comunion, bodas, navidad, individual, empresa, eventos];
 
   constructor() { }
 

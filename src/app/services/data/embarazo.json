@@ -7,8 +7,39 @@
         "En estas sesiones conoceremos y disfrutaremos de todos los sentimientos y emociones que nos produce el embarazo, así como las sensaciones que nos regala el bebé.",
         "<strong>¿Cuándo realizar las sesiones de embarazo?</strong><br/>Aconsejamos a la futura mamá realizar esta sesión entre la semana 32 y la 36, puesto que es el momento en que la barriga está más bonita y la mamá no está tan cansada.",
         "<strong>¿Quién puede participar?</strong><br/>En esta sesión podemos incluir al papá y a los hermanitos si es que hay más peques en la familia.",
-        "<strong>Dónde realizar esta sesión?</strong><br/>Tenemos muchas posibilidades. Se puede hacer en estudio, a domicilio o en exterior dependiendo de la época del año.",
+        "<strong>¿Dónde realizar esta sesión?</strong><br/>Tenemos muchas posibilidades. Se puede hacer en estudio, a domicilio o en exterior dependiendo de la época del año.",
         "<strong>Vestuario</strong><br/>El vestuario depende de la idea que tengamos en nuestra mente, pues tenemos mamás más sencillas que con un jean y un top se sienten cómodas, y mamás a las que les gusta llevar largos vestidos de princesa. Cuéntanos cuál es tu estilo y buscaremos tanto la vestimenta como el lugar adecuado para la sesión.",
         "<strong>Bellypainting</strong><br/>El bellypainting es una forma divertida de dar vida a la barriguita dibujando y pintando en ella en la sesión de fotos, tenemos la posibilidad de realizar un diseño personalizado por un plus de 50€."
+    ],
+    "tariffs": [
+        {
+            "name": "Básica",
+            "features": [
+                "Duración: 1h",
+                "Incluye 20 fotos digitales"
+            ],
+            "price": 75
+        },
+        {
+            "name": "Estándar",
+            "features": [
+                "Duración: 1h",
+                "Incluye 20 fotos digitales",
+                "20 copias impresas 13x18",
+                "Caja portafotos símil piel"
+            ],
+            "price": 140
+        },
+        {
+            "name": "Plus",
+            "features": [
+                "Duración: 1h",
+                "Incluye 30 fotos digitales",
+                "30 copias impresas 13x18",
+                "Caja portafotos símil piel",
+                "Álbum digital 21x28 o 28x28 de 26 páginas"
+            ],
+            "price": 230
+        }
     ]
 }
