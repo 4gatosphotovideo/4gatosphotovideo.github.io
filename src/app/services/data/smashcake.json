@@ -12,32 +12,32 @@
     ],
     "tariffs": [
         {
-            "name": "Básica",
+            "name": "Digital",
             "features": [
                 "Duración: 1h - 2h",
-                "Incluye 20 fotos digitales"
+                "20 fotos digitales"
             ],
-            "price": 100
+            "price": 120
         },
         {
             "name": "Estándar",
             "features": [
                 "Duración: 1h - 2h",
-                "Incluye 20 fotos digitales",
-                "Acordeón 10x15 de 12 páginas",
-                "Impresión en marco de madera 15x20"
+                "20 fotos digitales",
+                "2 Acordeones 15x10 de 8 páginas",
+                "Álbum digital 19x19 de 10 páginas"
             ],
-            "price": 150
+            "price": 180
         },
         {
             "name": "Plus",
             "features": [
                 "Duración: 1h - 2h",
-                "Incluye 30 fotos digitales",
-                "Álbum digital 21x28 o 28x28 de 26 páginas",
-                "Impresión en marco de madera 30x40"
+                "30 fotos digitales",
+                "2 Acordeones 10x15 de 12 páginas",
+                "Álbum digital 28x19 de 26 páginas"
             ],
-            "price": 230
+            "price": 220
         }
     ]
 }

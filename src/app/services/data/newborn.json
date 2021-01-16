@@ -12,32 +12,34 @@
     ],
     "tariffs": [
         {
-            "name": "Básica",
+            "name": "Digital",
             "features": [
-                "Duración: 3h - 4h",
-                "Incluye 20 fotos digitales"
+                "Duración: 2h - 3h",
+                "20 fotos digitales"
             ],
-            "price": 150
+            "price": 180
         },
         {
             "name": "Estándar",
             "features": [
-                "Duración: 3h - 4h",
-                "Incluye 30 fotos digitales",
-                "Álbum digital 15x15 de 26 páginas",
-                "Impresión en marco de madera 15x20"
+                "Duración: 2h - 3h",
+                "20 fotos digitales",
+                "10 copias 15x21",
+                "Álbum digital 28x19 de 10 páginas"
             ],
-            "price": 220
+            "price": 250
         },
         {
             "name": "Plus",
             "features": [
-                "Duración: 3h - 4h",
-                "Incluye 30 fotos digitales",
-                "Álbum digital 21x28 o 28x28 de 26 páginas",
-                "Impresión en marco de madera 30x40"
+                "Duración: 2h - 3h",
+                "30 fotos digitales",
+                "20 copias 15x21",
+                "1 Ampliación 30x45",
+                "Álbum digital 28x28 de 26 páginas"
+                
             ],
-            "price": 280
+            "price": 315
         }
     ]
 }

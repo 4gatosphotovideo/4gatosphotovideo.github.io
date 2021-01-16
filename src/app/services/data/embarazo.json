@@ -13,33 +13,33 @@
     ],
     "tariffs": [
         {
-            "name": "Básica",
+            "name": "Digital",
             "features": [
                 "Duración: 1h",
-                "Incluye 20 fotos digitales"
+                "20 fotos digitales"
             ],
-            "price": 75
+            "price": 90
         },
         {
             "name": "Estándar",
             "features": [
                 "Duración: 1h",
-                "Incluye 20 fotos digitales",
-                "20 copias impresas 13x18",
-                "Caja portafotos símil piel"
+                "20 fotos digitales",
+                "10 copias impresas 15x21",
+                "Álbum digital 19x19 de 10 páginas"
             ],
-            "price": 140
+            "price": 155
         },
         {
             "name": "Plus",
             "features": [
                 "Duración: 1h",
-                "Incluye 30 fotos digitales",
-                "30 copias impresas 13x18",
-                "Caja portafotos símil piel",
-                "Álbum digital 21x28 o 28x28 de 26 páginas"
+                "30 fotos digitales",
+                "20 copias impresas 15x21",
+                "1 ampliación 30x45",
+                "Álbum digital 28x19 de 26 páginas"
             ],
-            "price": 230
+            "price": 210
         }
     ]
 }
