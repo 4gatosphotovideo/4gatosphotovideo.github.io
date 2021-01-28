@@ -30,7 +30,7 @@
                 "Álbum digital 19x19 de 10 páginas"
             ],
             "price": 155,
-            "offer": { "price": 110, "until": "01/03"}
+            "offer": { "price": 115, "until": "01/03"}
         },
         {
             "name": "Plus",
@@ -42,7 +42,7 @@
                 "Álbum digital 28x19 de 26 páginas"
             ],
             "price": 210,
-            "offer": { "price": 165, "until": "01/03"}
+            "offer": { "price": 180, "until": "01/03"}
         }
     ]
 }
