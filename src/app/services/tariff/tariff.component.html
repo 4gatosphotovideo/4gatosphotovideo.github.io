@@ -8,8 +8,8 @@
       <p *ngIf="service.tariffs" class="card-text">Desde <span class="price"
           [ngClass]="{'old-price':getMinPrice(service).offer}">{{getMinPrice(service).price}}€</span>
         <span class="price" *ngIf="getMinPrice(service).offer"> {{getMinPrice(service).offer.price}}€</span>
-        <span class="offer-until" *ngIf="getMinPrice(service).offer">Promo hasta el
-          {{getMinPrice(service).offer.until}}</span>
+        <!-- <span class="offer-until" *ngIf="getMinPrice(service).offer">Promo hasta el
+          {{getMinPrice(service).offer.until}}</span> -->
       </p>
       <p *ngIf="!service.tariffs" class="card-text price">&nbsp;</p>
     </div>
