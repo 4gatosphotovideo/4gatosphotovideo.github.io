@@ -18,8 +18,7 @@
                 "Duración: 1h",
                 "20 fotos digitales"
             ],
-            "price": 90,
-            "offer": { "price": 45, "until": "01/03"}
+            "price": 90
         },
         {
             "name": "Estándar",
@@ -29,8 +28,7 @@
                 "10 copias impresas 15x21",
                 "Álbum digital 19x19 de 10 páginas"
             ],
-            "price": 155,
-            "offer": { "price": 120, "until": "01/03"}
+            "price": 155
         },
         {
             "name": "Plus",
@@ -41,8 +39,7 @@
                 "1 ampliación 30x45",
                 "Álbum digital 28x19 de 26 páginas"
             ],
-            "price": 210,
-            "offer": { "price": 185, "until": "01/03"}
+            "price": 210
         }
     ]
 }

@@ -17,8 +17,7 @@
                 "Duración: 2h - 3h",
                 "20 fotos digitales"
             ],
-            "price": 180,
-            "offer": { "price": 90, "until": "01/03"}
+            "price": 180
         },
         {
             "name": "Estándar",
@@ -28,8 +27,7 @@
                 "10 copias 15x21",
                 "Álbum digital 28x19 de 10 páginas"
             ],
-            "price": 250,
-            "offer": { "price": 170, "until": "01/03"}
+            "price": 250
         },
         {
             "name": "Plus",
@@ -41,8 +39,7 @@
                 "Álbum digital 28x28 de 26 páginas"
                 
             ],
-            "price": 315,
-            "offer": { "price": 250, "until": "01/03"}
+            "price": 315
         }
     ]
 }
