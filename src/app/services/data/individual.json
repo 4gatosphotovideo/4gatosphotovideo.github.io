@@ -4,5 +4,15 @@
     "description":[
         "Nuestra imagen es importante para muchas cosas y es probable que durante nuestra vida necesitemos un reportaje fotográfico para nosotros mismos.",
         "Puede ser por diferentes razones: imagen corporativa para nuestra empresa, renovación de fotos en las redes sociales, sesiones de empoderamiento (que no sólo femenino, ¿por qué no masculino?), books, sesiones de cumple para nuestros adolescentes (quinceañeras, por ejemplo) o simplemente que nos apetezca regalarnos o regalar una experiencia para recordar."
+    ],
+    "tariffs": [
+        {
+            "name": "Digital",
+            "features": [
+                "Duración: 30 min",
+                "10 fotos digitales"
+            ],
+            "price": 60
+        }
     ]
 }

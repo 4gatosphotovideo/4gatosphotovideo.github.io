@@ -4,37 +4,17 @@
     "title": "Sesiones para bebés",
     "description": [
         "<span class='font-weight-bold'>Cada etapa de nuestro bebé es única</span>",
-        "Las sesiones para bebés se pueden realizar desde los 3 hasta los 12 meses. En estas sesiones disfrutaremos de los momentos más dulces de nuestros peques, ya que en esta edad es cuando empiezan a descubrir, sonreir y jugar.",
+        "Las sesiones para bebés se pueden realizar desde los 2 hasta los 18 meses. En estas sesiones disfrutaremos de los momentos más dulces de nuestros peques, ya que en esta edad es cuando empiezan a descubrir, sonreir y jugar.",
         "Si te apetece capturar estos momentos, cuéntanos tu idea y podremos realizar una sesión personalizada."
     ],
     "tariffs": [
         {
             "name": "Digital",
             "features": [
-                "Duración: 1h",
-                "20 fotos digitales"
+                "Duración: 30 min",
+                "10 fotos digitales"
             ],
-            "price": 90
-        },
-        {
-            "name": "Estándar",
-            "features": [
-                "Duración: 1h",
-                "20 fotos digitales",
-                "2 Acordeones 15x10 de 8 páginas",
-                "Álbum digital 19x19 de 10 páginas"
-            ],
-            "price": 150
-        },
-        {
-            "name": "Plus",
-            "features": [
-                "Duración: 1h",
-                "30 fotos digitales",
-                "2 Acordeones 10x15 de 12 páginas",
-                "Álbum digital 28x19 de 26 páginas"
-            ],
-            "price": 190
+            "price": 80
         }
     ]
 }

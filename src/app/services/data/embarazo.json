@@ -13,7 +13,7 @@
     ],
     "tariffs": [
         {
-            "name": "Digital",
+            "name": "Embarazo",
             "features": [
                 "Duración: 1h",
                 "20 fotos digitales"
@@ -21,25 +21,11 @@
             "price": 90
         },
         {
-            "name": "Estándar",
+            "name": "Pack Embarazo + Newborn",
             "features": [
-                "Duración: 1h",
-                "20 fotos digitales",
-                "10 copias impresas 15x21",
-                "Álbum digital 19x19 de 10 páginas"
+                "40 fotos digitales e impresas 15x21"
             ],
-            "price": 155
-        },
-        {
-            "name": "Plus",
-            "features": [
-                "Duración: 1h",
-                "30 fotos digitales",
-                "20 copias impresas 15x21",
-                "1 ampliación 30x45",
-                "Álbum digital 28x19 de 26 páginas"
-            ],
-            "price": 210
+            "price": 220
         }
     ]
 }

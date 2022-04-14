@@ -8,36 +8,7 @@
         "<span class='font-weight-bold'>¿Y el pastel?</span><br/>Disponemos de servicio de pastelería. Podemos encargarnos nosotros del pastel por un suplemento de 25€. Si lo quieres traer tú, sólo tienes que decirnos los colores para adaptar el escenario.",
         "<span class='font-weight-bold'>Vestuario</span><br/>Disponemos de diferentes modelos de vestuario para los pequeños: coronas, cubrepañales o petos. Hablaremos con la mamá y el papá para elegir la opción que más les guste.",
         "<span class='font-weight-bold'>¿Qué traer a la sesión?</span><br/>Es importante traer las cositas de la higiene personal de nuestro pequeño: toalla, pañales y cremas corporales.",
-        "<span class='font-weight-bold'>¿Está sesión siempre se realiza en estudio?</span><br/>Normalmente sí, pero si tu pequeño/a cumple el añito entre julio y agosto se puede mirar de hacerlo en exterior con todo el atrezzo necesario. Consultanos para realizar un presupuesto."
-    ],
-    "tariffs": [
-        {
-            "name": "Digital",
-            "features": [
-                "Duración: 1h - 2h",
-                "20 fotos digitales"
-            ],
-            "price": 120
-        },
-        {
-            "name": "Estándar",
-            "features": [
-                "Duración: 1h - 2h",
-                "20 fotos digitales",
-                "2 Acordeones 15x10 de 8 páginas",
-                "Álbum digital 19x19 de 10 páginas"
-            ],
-            "price": 180
-        },
-        {
-            "name": "Plus",
-            "features": [
-                "Duración: 1h - 2h",
-                "30 fotos digitales",
-                "2 Acordeones 10x15 de 12 páginas",
-                "Álbum digital 28x19 de 26 páginas"
-            ],
-            "price": 220
-        }
+        "<span class='font-weight-bold'>¿Está sesión siempre se realiza en estudio?</span><br/>Normalmente sí, pero si tu pequeño/a cumple el añito entre julio y agosto se puede mirar de hacerlo en exterior con todo el atrezzo necesario. Consultanos para pedir presupuesto.",
+        "<span class='font-weight-bold'>Precios</span><br/>Contacta con nosotros para saber las nuevas tarifas."
     ]
 }

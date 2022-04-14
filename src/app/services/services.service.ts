@@ -19,7 +19,7 @@ import { Service } from './service';
 })
 export class ServicesService {
 
-  services: Service[] = [embarazo, newborn, bebes, smashcake, infantil, familias, comunion, bodas, navidad, individual, empresa, eventos];
+  services: Service[] = [embarazo, newborn, bebes, individual, infantil, familias, smashcake, comunion, bodas, navidad, empresa, eventos];
 
   constructor() { }
 }

@@ -9,31 +9,10 @@
         {
             "name": "Digital",
             "features": [
-                "Duración: 1h",
-                "20 fotos digitales"
+                "Duración: 30 min",
+                "10 fotos digitales"
             ],
-            "price": 120
-        },
-        {
-            "name": "Estándar",
-            "features": [
-                "Duración: 1h",
-                "20 fotos digitales",
-                "10 copias 15x21",
-                "Álbum digital 19x19 de 10 páginas"
-            ],
-            "price": 185
-        },
-        {
-            "name": "Plus",
-            "features": [
-                "Duración: 1h",
-                "30 fotos digitales",
-                "20 copias 15x21",
-                "1 Ampliación 30x45",
-                "Álbum digital 28x19 de 26 páginas"
-            ],
-            "price": 240
+            "price": 75
         }
     ]
 }
