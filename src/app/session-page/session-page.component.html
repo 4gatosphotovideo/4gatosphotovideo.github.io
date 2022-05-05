@@ -1,0 +1,40 @@
+<section id="data.title">
+<div class="col-m-11 m-5 pt-5">
+
+    <h1>{{data.title}}</h1>
+
+    <p class="content" *ngIf="data.description" [innerHTML]="data.description"></p>
+
+    <app-gallery-photo [category]="data.id" [size]="data.gallerySize"></app-gallery-photo>
+
+    <h2>Precios</h2>
+
+    <div *ngIf="data.tariffs" class="row mt-5">
+        <div [class]="'col-md-'+(12/data.tariffs.length)" *ngFor="let tariff of data.tariffs">
+            <div class="card tariff-card">            
+            <div class="card-header price-tariff-header">
+                {{tariff.name}}
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                <ul class="price-tariff-details">
+                    <li *ngFor="let feature of tariff.features">{{feature}}</li>
+                </ul>
+                <span *ngIf="tariff.offer" class="offer-until">Oferta hasta el {{tariff.offer.until}}</span>
+                </li>
+                <li class="list-group-item text-center">
+                    <span class="price-tariff" [ngClass]="{'with-offer':tariff.offer}">
+                        <span *ngIf="tariff.offer" class="old-price">{{tariff.price}}€<br /></span>
+                        {{tariff.offer?tariff.offer.price:tariff.price}}€
+                    </span>
+                <a class="btn btn-success" target="blank"
+                    href="https://api.whatsapp.com/send?phone=34600688860&text={{whatsAppMessage + data.title + ' ' + tariff.name | replaceSpacesURL }}">
+                    Lo quiero <fa-icon [icon]="faWhatsapp" class="ml-2"></fa-icon>
+                </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

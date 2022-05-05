@@ -1,5 +1,5 @@
 .navbar {
-  background-color: transparent !important;
+  background-color: black !important;
   transition: all 0.5s;
   padding: 0.5em 3em;
 }
@@ -27,13 +27,13 @@
   left: auto !important;
   right: 0px;
   text-align: center;
-  background-color: transparent;
+  background-color: var(--black-trans);
 }
 .dropdown-item,
 .dropdown-item:hover,
 .dropdown-item:focus {
   color: white !important;
-  background-color: transparent !important;
+  transition: all 0.5s;
 }
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
@@ -47,13 +47,10 @@
   .dropdown-menu {
     min-width: 5em;
     margin-top: 0.1em;
-    // box-shadow: 1px 1px 5px;
-    background-color: var(--green);
   }
   .scrolled {
     .dropdown-menu {
       margin-top: 0.75em;
-      // box-shadow: 1px 1px 5px;
       background-color: var(--black-trans);
     }
   }

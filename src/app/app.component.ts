@@ -23,11 +23,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-    $('a[href*="#cookie"]').on('click', function (event) {
-      $("#modalCookiePolicy").modal("show");
-      return false;
-    });
-
     if (this.ccService.hasConsented()) {
       this.callGoogleAnalytics();
     }

@@ -1,0 +1,37 @@
+{
+    "id":"embarazo",
+    "title":"Sesiones de embarazo",
+    "description":[
+        "<span class='font-weight-bold'>La espera más dulce</span><br />A todas las mamás nos gusta inmortalizar nuestra barriguita para poder enseñarla a nuestro peque en un futuro.<br />En estas sesiones conoceremos y disfrutaremos de todos los sentimientos y emociones que nos produce el embarazo, así como las sensaciones que nos regala el bebé.<br /><strong>¿Cuándo realizar las sesiones de embarazo?</strong><br/>Aconsejamos a la futura mamá realizar esta sesión entre la semana 32 y la 36, puesto que es el momento en que la barriga está más bonita y la mamá no está tan cansada.<br /><strong>¿Quién puede participar?</strong><br/>En esta sesión podemos incluir al papá y a los hermanitos si es que hay más peques en la familia.<br /><strong>¿Dónde realizar esta sesión?</strong><br/>Tenemos muchas posibilidades. Se puede hacer en estudio, a domicilio o en exterior dependiendo de la época del año.<br /><strong>Vestuario</strong><br/>El vestuario depende de la idea que tengamos en nuestra mente, pues tenemos mamás más sencillas que con un jean y un top se sienten cómodas, y mamás a las que les gusta llevar largos vestidos de princesa. Cuéntanos cuál es tu estilo y buscaremos tanto la vestimenta como el lugar adecuado para la sesión.<br /><strong>Bellypainting</strong><br/>El bellypainting es una forma divertida de dar vida a la barriguita dibujando y pintando en ella en la sesión de fotos, tenemos la posibilidad de realizar un diseño personalizado por un plus de 50€."
+    ],
+    "tariffs": [
+        {
+            "id": "embarazo-digital",
+            "name": "Digital",
+            "features": [
+                "Duración: 1h",
+                "20 fotos digitales"
+            ],
+            "price": 90,
+            "offer": {
+                "price": 80,
+                "until": "01/06"
+            }
+        },
+        {
+            "id": "pack-embarazo-newborn",
+            "name": "Pack + newborn",
+            "features": [
+                "Sesión Embarazo (10 fotos)",
+                "Sesión Newborn (10 fotos)",
+                "Total 20 fotos digitales"
+            ],
+            "price": 200,
+            "offer": {
+                "price": 180,
+                "until": "01/06"
+            }
+        }
+    ],
+    "gallerySize": 7
+}

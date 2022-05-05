@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
       history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
     });
 
-    $('.arrow>a, .navbar-brand, .nav-link:not(.dropdown-toggle)').on('click', function () {
+    $('.navbar-brand, .nav-link:not(.dropdown-toggle)').on('click', function () {
       $('.navbar-collapse').collapse('hide');
       $('.dropdown-menu').collapse('hide');
     });
@@ -46,7 +46,7 @@ export class NavbarComponent implements OnInit {
     });
 
     $('a[href*="#"]')
-      // Remove links that don't actually link to anything
+      // Remove links to different routes
       .not('[href="#"]')
       .not('[href="#0"]')
       .not('[href="#cookie"]')

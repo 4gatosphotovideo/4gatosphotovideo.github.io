@@ -1,9 +1,11 @@
-export interface Tariff1 {
+export interface Tariff {
+    id: String;
     name: string;
     price: number;
     features: string[];
     offer?: { 
         price: number,
-        until: string
+        until: String
     };
+    isPack?: Boolean;
 }

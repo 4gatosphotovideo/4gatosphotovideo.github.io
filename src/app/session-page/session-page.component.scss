@@ -1,0 +1,129 @@
+  .tariff-card {
+    width: 17rem;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 30px;
+    .list-group-item{
+      padding-bottom: 2em;
+    }
+    .card-header {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .offer-until {
+      position: absolute;
+      line-height: 0px;
+      margin-left: 3.1em;
+      margin-top: 1em;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+  }
+  
+  .price {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .old-price {
+    color: red;
+    text-decoration: line-through;
+    font-size: 1em;
+  }
+
+  .price-tariff-title {
+    text-align: center;
+    background: var(--green);
+    padding: 0 10px;
+    line-height: 0.05em;
+    span {
+      text-align: center;
+      background: #fff;
+      padding: 0 10px;
+    }
+  }
+  
+  .price-details-body {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .price-tariff {
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    border: solid 2px;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 999;
+    margin-left: 7.5em;
+    border-color: #b5e6a2;
+    margin-top: -0.4em;
+    padding-top: 0.9em;
+    font-size: 1.5em;
+    .old-price {
+      font-size: 0.6em;
+    }
+  }
+  .price-tariff.with-offer {
+    padding-top: 0;
+    line-height: 1em;
+  }
+  
+  .price-tariff-title {
+    text-align: center;
+    background: #b5e6a2;
+    padding: 0 10px;
+    line-height: 0.05em;
+  }
+  .price-tariff-title span {
+    text-align: center;
+    background: #fff;
+    padding: 0 10px;
+  }
+  
+  .price-tariff-header {
+    background: #b5e6a2;
+    font-weight: bolder;
+    font-size: 1.5em;
+  }
+  
+  .price-tariff-details {
+    padding: 1.5em 0.5em;
+    font-size: small;
+    height: 10em;
+  }
+  
+  .offer-until {
+    float: left;
+    line-height: 5px;
+    font-size: 0.8em;
+    margin-top: 5px;
+    color: red;
+  }
+  
+  @media(max-width: 350px){
+    .tariff-card {
+      width: 14rem;
+      .offer-until {
+        margin-left: 1.5em;
+      }
+    }
+    .price-tariff {
+      margin-left: 5.5em;
+    }
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 991px) { 
+    .tariff-card {
+      width: 14rem;
+      .offer-until {
+        margin-left: 1.5em;
+      }
+    }
+    .price-tariff {
+      margin-left: 5.5em;
+    }
+  }

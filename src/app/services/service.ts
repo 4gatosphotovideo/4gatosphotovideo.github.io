@@ -1,9 +1,9 @@
-import { Tariff } from './tariff/tariff';
+// import { Tariff } from './tariff/tariff';
 
-export interface Service{
-    name: string;
-    thumbnailName?: string;
-    title: string;
-    description: string[];
-    tariffs?: Tariff[];
-}
+// export interface Service{
+//     name: string;
+//     thumbnailName?: string;
+//     title: string;
+//     description: string[];
+//     tariffs?: Tariff[];
+// }

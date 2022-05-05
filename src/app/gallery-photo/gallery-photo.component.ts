@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 // jQuery
 declare var $: any;
@@ -10,17 +10,11 @@ declare var $: any;
 })
 export class GalleryPhotoComponent implements OnInit {
 
-  categories: any[] = [
-    { name: "embarazo", tag: "Embarazo", files: 7 },
-    { name: "newborn", tag: "Newborn", files: 6 },
-    { name: "bebes", tag: "Bebés", files: 4 },
-    { name: "smashcake", tag: "Smashcake", files: 6 },
-    { name: "peques", tag: "Peques", files: 4 },
-    { name: "familias", tag: "Familias", files: 3 },
-    { name: "comunion", tag: "Comunión", files: 4 },
-    { name: "navidad", tag: "Navidad", files: 6 },
-    { name: "individual", tag: "Individual", files: 6 }
-  ]
+  @Input("category")
+  category: String;
+
+  @Input("size")
+  size: number;
 
   pictures: any[] = [];
 
@@ -28,16 +22,15 @@ export class GalleryPhotoComponent implements OnInit {
 
   ngOnInit() {
     // populate pictures array
-    this.categories.forEach((c, index) => {
-      for (var i = 1; i <= c.files; i++) {
-        var picturePath = "assets/img/gallery/" + c.name + "/" + i + ".jpg";
-        this.pictures.push({ src: picturePath, srct: picturePath, tags: c.tag });
+      for (var i = 1; i <= this.size; i++) {
+        var picturePath = "assets/img/gallery/" + this.category + "/" + i + ".jpg";
+        this.pictures.push({ src: picturePath, srct: picturePath });
       }
-    });
+
 
     $("#nanogallery-photos").nanogallery2({
       items: this.pictures,
-      galleryFilterTags: true,
+      galleryFilterTags: false,
       locationHash: false,
       thumbnailWidth: "200",
       thumbnailHeight: "auto",
@@ -63,10 +56,10 @@ export class GalleryPhotoComponent implements OnInit {
         topLeft: "label",
         topRight: "playPauseButton, zoomButton, fullscreenButton, closeButton"
       },
-      icons:{
-        navigationFilterSelectedAll:'Todas',
-        navigationFilterUnselected:'',
-        navigationFilterSelected:''
+      icons: {
+        navigationFilterSelectedAll: 'Todas',
+        navigationFilterUnselected: '',
+        navigationFilterSelected: ''
       }
     });
   }
