@@ -20,17 +20,13 @@
         },
         {
             "id": "pack-embarazo-newborn",
-            "name": "Pack + newborn",
+            "name": "Pack embarazo + newborn",
             "features": [
                 "Sesión Embarazo (10 fotos)",
                 "Sesión Newborn (10 fotos)",
                 "Total 20 fotos digitales"
             ],
-            "price": 200,
-            "offer": {
-                "price": 180,
-                "until": "01/06"
-            }
+            "price": 200
         }
     ],
     "gallerySize": 7
