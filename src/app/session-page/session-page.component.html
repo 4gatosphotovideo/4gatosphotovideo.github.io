@@ -1,13 +1,13 @@
 <section id="data.title">
-<div class="col-m-11 m-5 pt-5">
+<div class="col-m-11 m-5 pt-5 section-header">
 
-    <h1>{{data.title}}</h1>
+    <h3>{{data.title}}</h3>
 
-    <p class="content" *ngIf="data.description" [innerHTML]="data.description"></p>
+    <p class="text-justify" *ngFor="let desc of data.description" [innerHTML]="desc"></p>
 
     <app-gallery-photo [category]="data.id" [size]="data.gallerySize"></app-gallery-photo>
 
-    <h2>Precios</h2>
+    <h3>Tarifas</h3>
 
     <div *ngIf="data.tariffs" class="row mt-5">
         <div [class]="'col-md-'+(12/data.tariffs.length)" *ngFor="let tariff of data.tariffs">
