@@ -7,7 +7,7 @@
 
     <app-gallery-photo [galleryData]="galleryData" ></app-gallery-photo>
 
-    <h3>Tarifas</h3>
+    <h3 *ngIf="data.tariffs">Tarifas</h3>
 
     <div *ngIf="data.tariffs" class="row mt-5">
         <div [class]="'col-md-'+(12/data.tariffs.length)" *ngFor="let tariff of data.tariffs">
@@ -28,16 +28,15 @@
                 </ul>
                 <span *ngIf="tariff.offer" class="offer-until">Oferta hasta el {{tariff.offer.until}}</span>
                 </li>
-                <li class="list-group-item text-center">
-                    
-                <a class="btn btn-success" target="blank"
-                    href="https://api.whatsapp.com/send?phone=34600688860&text={{whatsAppMessage + data.title + ' ' + tariff.name | replaceSpacesURL }}">
-                    Lo quiero <fa-icon [icon]="faWhatsapp" class="ml-2"></fa-icon>
-                </a>
-                </li>
             </ul>
             </div>
         </div>
+    </div>
+    <div class="text-center">
+        <a class="btn btn-success" target="blank"
+            href="https://api.whatsapp.com/send?phone=34600688860&text={{whatsAppMessage + data.title | replaceSpacesURL }}">
+            Contacta por WhatsApp<fa-icon [icon]="faWhatsapp" class="ml-2"></fa-icon>
+        </a>
     </div>
 </div>
 </section>

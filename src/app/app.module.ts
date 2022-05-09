@@ -24,6 +24,7 @@ import { SessionPageComponent } from './session-page/session-page.component';
 import { EmbarazoComponent } from './services/embarazo/embarazo.component';
 import { BebesComponent } from './services/bebes/bebes.component';
 import { NewbornComponent } from './services/newborn/bebes.component';
+import { ComunionComponent } from './services/comunion/comunion.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -67,7 +68,8 @@ const cookieConfig:NgcCookieConsentConfig = {
     SessionPageComponent,
     EmbarazoComponent,
     BebesComponent,
-    NewbornComponent
+    NewbornComponent,
+    ComunionComponent
   ],
   imports: [
     BrowserModule,
