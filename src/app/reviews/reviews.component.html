@@ -1,0 +1,27 @@
+<section id="reviews">
+    <div class="container">
+      <div class="section-header mb-5">
+        <h3>Opiniones</h3>
+        <p>
+          Reseñas reales escritas por nuestros clientes
+        </p>
+
+        
+        <div *ngFor="let review of reviewsData">
+            <p><a [href]="review.link" target="_blank">{{review.name}}</a></p>
+            <p>
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                {{review.text}}
+                <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </p>
+            <div class="stars">
+                <i *ngFor="let in of counter(review.stars)" class="fa fa-star fa-lg" aria-hidden="true"></i>
+            </div>
+        </div>
+        
+        
+      </div>
+  
+    
+    </div>
+  </section>
