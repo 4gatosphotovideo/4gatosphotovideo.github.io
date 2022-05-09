@@ -39,10 +39,11 @@
           Sesiones</a
         >
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="nav-link dropdown-item" [routerLink]="['embarazo']">Embarazo</a>
-          <a class="nav-link dropdown-item" [routerLink]="['bebes']">Bebés</a>
-          <a class="nav-link dropdown-item" [routerLink]="['newborn']">Newborn</a>
-          <a class="nav-link dropdown-item" [routerLink]="['comunion']">Comuniones</a>
+          <a 
+            class="nav-link dropdown-item"
+            *ngFor="let serv of services"
+            [routerLink]="[serv.route]"
+          >{{serv.label}}</a>
         </div>
       </li>
       <!-- <li class="nav-item active">

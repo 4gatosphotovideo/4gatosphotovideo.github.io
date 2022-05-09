@@ -10,6 +10,13 @@ declare var $: any;
 })
 export class NavbarComponent implements OnInit {
 
+  services: Array<{route: string, label: string}> = [
+    {route: "bebes", label:"Bebés"},
+    {route: "newborn", label:"Newborn"},
+    {route: "embarazo", label:"Embarazo"},
+    {route: "comunion", label:"Comunión"},
+  ]
+
   headerScrolled: String = "";
 
   constructor() { }
