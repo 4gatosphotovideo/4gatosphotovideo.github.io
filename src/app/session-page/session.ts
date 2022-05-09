@@ -1,9 +1,9 @@
 import { Tariff } from "./tariff";
 
 export interface Session {
-    id: String;
-    title: String;
-    description: String[];
+    id: string;
+    title: string;
+    description: string[];
     gallerySize: number;
     tariffs: Tariff[];
 }

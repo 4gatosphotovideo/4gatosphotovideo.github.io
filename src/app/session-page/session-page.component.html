@@ -5,7 +5,7 @@
 
     <p class="text-justify" *ngFor="let desc of data.description" [innerHTML]="desc"></p>
 
-    <app-gallery-photo [category]="data.id" [size]="data.gallerySize"></app-gallery-photo>
+    <app-gallery-photo [galleryData]="galleryData" ></app-gallery-photo>
 
     <h3>Tarifas</h3>
 

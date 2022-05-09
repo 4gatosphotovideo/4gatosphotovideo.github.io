@@ -30,10 +30,14 @@
   background-color: var(--black-trans);
 }
 .dropdown-item,
-.dropdown-item:hover,
 .dropdown-item:focus {
-  color: white !important;
+  color: white;
   transition: all 0.5s;
+}
+
+.dropdown-item:hover{
+  color: black !important;
+  background-color: var(--green);
 }
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {

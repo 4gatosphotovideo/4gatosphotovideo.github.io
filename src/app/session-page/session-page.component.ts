@@ -9,7 +9,7 @@ declare var $: any;
   templateUrl: './session-page.component.html',
   styleUrls: ['./session-page.component.scss']
 })
-export class SessionPageComponent {
+export class SessionPageComponent implements OnInit {
 
   faWhatsapp = faWhatsapp;
   faPlus = faPlus;
@@ -18,7 +18,19 @@ export class SessionPageComponent {
   @Attribute("data")
   data: Session;
 
+  galleryData : {
+    id: string,
+    size: number
+  }
+
   constructor() {
+    
+  }
+  ngOnInit(): void {
+    this.galleryData = {
+      id: this.data.id,
+      size: this.data.gallerySize
+    }
   }
 
  

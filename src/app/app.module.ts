@@ -21,7 +21,9 @@ import { LegalComponent } from './legal/legal.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { SessionPageComponent } from './session-page/session-page.component';
-import { EmbarazoComponent } from './embarazo/embarazo.component';
+import { EmbarazoComponent } from './services/embarazo/embarazo.component';
+import { BebesComponent } from './services/bebes/bebes.component';
+import { NewbornComponent } from './services/newborn/bebes.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -63,7 +65,9 @@ const cookieConfig:NgcCookieConsentConfig = {
     LegalComponent,
     HomeComponent,
     SessionPageComponent,
-    EmbarazoComponent
+    EmbarazoComponent,
+    BebesComponent,
+    NewbornComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 
 // jQuery
 declare var $: any;
@@ -8,27 +8,29 @@ declare var $: any;
   templateUrl: './gallery-photo.component.html',
   styleUrls: ['./gallery-photo.component.scss']
 })
-export class GalleryPhotoComponent implements OnInit {
+export class GalleryPhotoComponent implements AfterViewInit {
 
-  @Input("category")
-  category: String;
-
-  @Input("size")
-  size: number;
-
+  @Input("galleryData")
+  galleryData: {id: string, size: number}
+  
+  // @Input("id")
+  // id: String;
+  
+  // @Input("size")
+  // size: number;
+  
   pictures: any[] = [];
-
-  constructor() { }
-
-  ngOnInit() {
-    // populate pictures array
-      for (var i = 1; i <= this.size; i++) {
-        var picturePath = "assets/img/gallery/" + this.category + "/" + i + ".jpg";
-        this.pictures.push({ src: picturePath, srct: picturePath });
-      }
-
-
-    $("#nanogallery-photos").nanogallery2({
+  
+  constructor() {
+  }
+  ngAfterViewInit(): void {
+     // populate pictures array
+     for (var i = 1; i <= this.galleryData.size; i++) {
+      var picturePath = "assets/img/gallery/" + this.galleryData.id + "/" + i + ".jpg";
+      this.pictures.push({ src: picturePath, srct: picturePath });
+    }
+    
+    $("#nanogallery-photos-"+this.galleryData.id).nanogallery2({
       items: this.pictures,
       galleryFilterTags: false,
       locationHash: false,
@@ -62,7 +64,6 @@ export class GalleryPhotoComponent implements OnInit {
         navigationFilterSelected: ''
       }
     });
-  }
-
-
+  }  
+  
 }
