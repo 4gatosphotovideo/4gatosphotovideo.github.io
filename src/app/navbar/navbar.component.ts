@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
     {route: "newborn", label:"Newborn"},
     {route: "embarazo", label:"Embarazo"},
     {route: "comunion", label:"Comunión"},
+    {route: "familias", label:"Familias"},
   ]
 
   headerScrolled: String = "";

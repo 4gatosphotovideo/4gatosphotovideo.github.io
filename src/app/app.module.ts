@@ -25,6 +25,7 @@ import { EmbarazoComponent } from './services/embarazo/embarazo.component';
 import { BebesComponent } from './services/bebes/bebes.component';
 import { NewbornComponent } from './services/newborn/bebes.component';
 import { ComunionComponent } from './services/comunion/comunion.component';
+import { FamiliasComponent } from './services/familias/familias.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -69,7 +70,8 @@ const cookieConfig:NgcCookieConsentConfig = {
     EmbarazoComponent,
     BebesComponent,
     NewbornComponent,
-    ComunionComponent
+    ComunionComponent,
+    FamiliasComponent
   ],
   imports: [
     BrowserModule,

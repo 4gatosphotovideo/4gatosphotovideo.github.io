@@ -7,6 +7,7 @@ import { LegalComponent } from './legal/legal.component';
 import { BebesComponent } from './services/bebes/bebes.component';
 import { NewbornComponent } from './services/newborn/bebes.component';
 import { ComunionComponent } from './services/comunion/comunion.component';
+import { FamiliasComponent } from './services/familias/familias.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'bebes', component: BebesComponent },
   { path: 'newborn', component: NewbornComponent },
   { path: 'comunion', component: ComunionComponent },
+  { path: 'familias', component: FamiliasComponent },
 ];
 
 @NgModule({
