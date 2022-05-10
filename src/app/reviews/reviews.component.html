@@ -2,22 +2,41 @@
     <div class="container">
       <div class="section-header mb-5">
         <h3>Opiniones</h3>
-        <p>
-          Reseñas reales escritas por nuestros clientes
-        </p>
+
+        <div id="carouselReviews" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li
+              *ngFor="let review of reviewsData; let i = index"
+              data-target="#carouselReviews"
+              [attr.data-slide-to]="i"
+              [class.active]="i == 0">
+            ></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item" *ngFor="let review of reviewsData; let i = index" [class.active]="i == 0">
+              <p><a [href]="review.link" target="_blank">{{review.name}}</a></p>
+              <p>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                  {{review.text}}
+                  <i class="fa fa-quote-right" aria-hidden="true"></i>
+              </p>
+              <div class="stars">
+                  <i *ngFor="let in of counter(review.stars)" class="fa fa-star fa-lg" aria-hidden="true"></i>
+              </div>
+          </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselReviews" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselReviews" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
 
         
-        <div *ngFor="let review of reviewsData">
-            <p><a [href]="review.link" target="_blank">{{review.name}}</a></p>
-            <p>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                {{review.text}}
-                <i class="fa fa-quote-right" aria-hidden="true"></i>
-            </p>
-            <div class="stars">
-                <i *ngFor="let in of counter(review.stars)" class="fa fa-star fa-lg" aria-hidden="true"></i>
-            </div>
-        </div>
+        
         
         
       </div>

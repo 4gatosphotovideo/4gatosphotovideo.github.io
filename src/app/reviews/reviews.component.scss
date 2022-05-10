@@ -1,4 +1,38 @@
 .stars{
-	color: #BB8B41;
+	color: #d1bb3e;
     text-align: center;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+.carousel-indicators {
+    top: 0;
+    bottom: revert;
+    li{
+        border-radius: 50%;
+        background-color: black;
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+.carousel-inner{
+    padding-top: 5em;
+}
+.carousel-control-prev, .carousel-control-next {
+    align-items: baseline;
+    bottom: revert;
+}
+#reviews{
+    min-height: 550px;
+}
+.fa-quote-left, .fa-quote-right {
+    padding: .3em;
+    vertical-align: super;
 }

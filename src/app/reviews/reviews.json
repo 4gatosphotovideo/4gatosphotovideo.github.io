@@ -1,8 +1,33 @@
 [
     {
-        "name": "José Luis",
-        "text": "Guauuuuuuuu qué pedazo de sesión!",
+        "name": "Ana Belén Miranda",
+        "text": "Muy organizados, limpios, educados, creativos. Y sobre todo la paciencia de un santo con los críos. Totalmente recomendados",
         "stars": 5,
-        "link": "https://goo.gl/maps/hDjfgyFzGCrp4DSu7"
+        "link": "https://goo.gl/maps/vEcrqVYQP44RQtjHA"
+    },
+    {
+        "name": "Cristina Carbonell Ramírez",
+        "text": "Muy profesionales tanto Mónica como su pareja. Relación calidad precio más que buena",
+        "stars": 5,
+        "link": "https://goo.gl/maps/mwuxgaZn1PniKVNg7"
+    },
+    {
+        "name": "Verónica Borja",
+        "text": "Super contentos con nuestros reportaje para el día de la madre❤️ Mónica y su marido son estupendos para sacar una sonrisa a los más peques!! Hace un par de semanas tuvimos la suerte de visitar su estudio y quedamos tan contentos que aún me debato entre las fotos realizadas, porque a cuál me gusta más!!!! El trato recibido excepcional, están ubicados al lado de casa (si sois de Cornellá no busques más estudios porque este es el tuyo) y el espacio para las fotos es de lo más acogedor y cómodo si vas con un/a niñ@.  Repetiremos seguro❤️",
+        "stars": 5,
+        "link": "https://goo.gl/maps/1b623nJvuF2gdDvR8"
+    },
+    {
+        "name": "Ester Gonzalez",
+        "text": "Una chica súper amable y  un encanto con los los niños y ya sin hblar de su trabajo 10 sobre 10",
+        "stars": 5,
+        "link": "https://goo.gl/maps/Vv1vxjoGU457NHhD8"
+    }
+    ,
+    {
+        "name": "Aroma",
+        "text": "Agradables, atentos, simpaticos y muy profesionales. Nos an tratado genial, con mucha paciencia y con mucho cuidado con nuestro pequeño, encantados,  repetiremos. Los recomiendo 100 x 100",
+        "stars": 5,
+        "link": "https://www.facebook.com/mariaaroma/posts/10223192168382769"
     }
 ]
