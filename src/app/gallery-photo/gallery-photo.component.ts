@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 
 // jQuery
 declare var $: any;
@@ -12,12 +12,6 @@ export class GalleryPhotoComponent implements AfterViewInit {
 
   @Input("galleryData")
   galleryData: {id: string, size: number}
-  
-  // @Input("id")
-  // id: String;
-  
-  // @Input("size")
-  // size: number;
   
   pictures: any[] = [];
   
