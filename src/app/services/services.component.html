@@ -2,11 +2,29 @@
   <div class="container">
     <div class="section-header mb-5">
       <h3>Sesiones</h3>
-      <p>
-        Si estás interesado en contratar nuestros servicios, no dudes en
-        contactar con nosotros
-      </p>
-    </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-5" *ngFor="let session of sessions">
+          <div class="card service-card mx-auto">
+            <a [routerLink]="[session.id]">
+              <img class="card-img-top img-fluid" src="assets/img/services/{{session.id|lowercase}}.jpg" alt="Card image cap">
+            
+            <div class="card-body">
+              <h5 class="card-title text-center">{{(session.thumbnailName?session.thumbnailName:session.id)|uppercase}}</h5>
+              <p *ngIf="session.tariffs" class="card-text">Desde <span class="price"
+                  [ngClass]="{'old-price':getMinPrice(session).offer}">{{getMinPrice(session).price}}€</span>
+                <span class="price" *ngIf="getMinPrice(session).offer"> {{getMinPrice(session).offer.price}}€</span>
+                <!-- <span class="offer-until" *ngIf="getMinPrice(session).offer">Promo hasta el
+                  {{getMinPrice(session).offer.until}}</span> -->
+              </p>
+              <p *ngIf="!session.tariffs" class="card-text price">&nbsp;</p>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+
 
   
   </div>

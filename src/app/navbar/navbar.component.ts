@@ -43,7 +43,14 @@ export class NavbarComponent implements OnInit {
       history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
     });
 
-    $('.navbar-brand, .nav-link:not(.dropdown-toggle)').on('click', function () {
+    $('.navbar-brand').on('click',function(){
+      $('.navbar-collapse').collapse('hide');
+      $('.dropdown-menu').collapse('hide');
+      $('html, body').animate({ scrollTop: 0 }, 1200, 'easeInOutExpo');
+          return false;
+
+    });
+    $('.nav-link:not(.dropdown-toggle)').on('click', function () {
       $('.navbar-collapse').collapse('hide');
       $('.dropdown-menu').collapse('hide');
     });
