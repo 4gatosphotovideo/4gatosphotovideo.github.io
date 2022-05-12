@@ -2,7 +2,14 @@
   class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
   [ngClass]="headerScrolled"
 >
-  <a class="navbar-brand" [routerLink]="['/']">
+  <a class="navbar-brand" href="#intro" [hidden]="route != 'home'">
+    <img
+      src="assets/img/4gatos_logo_web.png"
+      alt="4gatos photo&video"
+      loading="lazy"
+    />
+  </a>
+  <a class="navbar-brand" [routerLink]="['/']" [hidden]="route == 'home'">
     <img
       src="assets/img/4gatos_logo_web.png"
       alt="4gatos photo&video"
@@ -25,19 +32,23 @@
     <ul class="navbar-nav ml-auto">
       
       <li class="nav-item active">
-        <a class="nav-link" href="#about">Quienes somos</a>
+        <a [hidden]="route != 'home'" class="nav-link" href="#about">Quienes somos</a>
+        <a [hidden]="route == 'home'" class="nav-link" [routerLink]="['/']" fragment="about">Quienes somos</a>
       </li>
       
       <li class="nav-item active">
-        <a class="nav-link" href="#services">Sesiones</a>
+        <a [hidden]="route != 'home'" class="nav-link" href="#services">Sesiones</a>
+        <a [hidden]="route == 'home'" class="nav-link" [routerLink]="['/']" fragment="services">Sesiones</a>
       </li>
       
       <li class="nav-item active">
-        <a class="nav-link" href="#reviews">Opiniones</a>
+        <a [hidden]="route != 'home'" class="nav-link" href="#reviews">Opiniones</a>
+        <a [hidden]="route == 'home'" class="nav-link" [routerLink]="['/']" fragment="reviews">Opiniones</a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="#contact">Contacto</a>
+        <a [hidden]="route != 'home'" class="nav-link" href="#contact">Contacto</a>
+        <a [hidden]="route == 'home'" class="nav-link" [routerLink]="['/']" fragment="contact">Contacto</a>
       </li>
     </ul>
   </div>
