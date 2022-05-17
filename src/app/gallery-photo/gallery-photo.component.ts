@@ -18,6 +18,7 @@ export class GalleryPhotoComponent implements AfterViewInit {
   constructor() {
   }
   ngAfterViewInit(): void {
+    $("#nanogallery-photos-"+this.galleryData.id).nanogallery2('destroy');
      // populate pictures array
      for (var i = 1; i <= this.galleryData.size; i++) {
       var picturePath = "assets/img/gallery/" + this.galleryData.id + "/" + i + ".jpg";
@@ -27,12 +28,14 @@ export class GalleryPhotoComponent implements AfterViewInit {
     $("#nanogallery-photos-"+this.galleryData.id).nanogallery2({
       items: this.pictures,
       galleryFilterTags: false,
+      eventsDebounceDelay: 0,
       locationHash: false,
       thumbnailWidth: "200",
       thumbnailHeight: "auto",
       thumbnailBorderVertical: 0,
       thumbnailBorderHorizontal: 0,
       thumbnailDisplayTransition: "scaleUp",
+      thumbnailDisplayOutsideScreen: true,
       gallerySorting: "random",
       thumbnailDisplayTransitionDuration: 500,
       galleryTheme: {
@@ -58,6 +61,16 @@ export class GalleryPhotoComponent implements AfterViewInit {
         navigationFilterSelected: ''
       }
     });
+
+    // Workaround
+    // Gallery not shown until scroll
+    let timeout;
+    if (!timeout) {
+      timeout = setTimeout(() => {
+        window.scroll({ top: 1, left: 0, behavior: 'auto'});
+        timeout = null;
+      }, 320)
+    }
   }  
   
 }
