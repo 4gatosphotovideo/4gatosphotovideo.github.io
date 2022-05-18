@@ -45,8 +45,8 @@ export class GalleryPhotoComponent implements AfterViewInit {
       },
       thumbnailHoverEffect2: "toolsAppear|imageSepiaOff",
       thumbnailAlignment: "center",
-      thumbnailGutterWidth: 10,
-      thumbnailGutterHeight: 10,
+      thumbnailDisplayTransitionDuration: 0,
+      thumbnailDisplayTransition: "fadeIn",
       displayBreadcrumb: false,
       thumbnailOpenImage: true,
       viewerTools: {
