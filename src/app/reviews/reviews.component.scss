@@ -26,16 +26,14 @@
 .carousel-inner{
     padding-top: 5em;
 }
-.carousel-control-prev, .carousel-control-next {
-    align-items: baseline;
-    bottom: revert;
-}
 #reviews{
     .card{
         border: solid 2px var(--green);
+        box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
     }
     .card-body{
         min-height: 20rem;
+        background-color: honeydew;
         .card-link{
             text-align: right;
         }

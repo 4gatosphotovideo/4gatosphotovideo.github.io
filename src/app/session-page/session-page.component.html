@@ -4,7 +4,9 @@
 
     <h3>{{data.title}}</h3>
 
-    <p class="text-justify" *ngFor="let desc of data.description" [innerHTML]="desc"></p>
+    <div class="col-9 mx-auto mb-5">
+        <p class="text-justify" *ngFor="let desc of data.description" [innerHTML]="desc"></p>
+    </div>
 
     <app-gallery-photo [galleryData]="galleryData" ></app-gallery-photo>
 
@@ -25,6 +27,7 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item text-center">
                 <ul class="price-tariff-details text-left">
+                    <h5>Incluye:</h5>
                     <li *ngFor="let feature of tariff.features">{{feature}}</li>
                 </ul>
                 <span *ngIf="tariff.offer" class="offer-until">Oferta hasta el {{tariff.offer.until}}</span>

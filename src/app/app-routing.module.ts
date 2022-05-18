@@ -5,7 +5,7 @@ import { EmbarazoComponent } from './services/embarazo/embarazo.component';
 import { HomeComponent } from './home/home.component';
 import { LegalComponent } from './legal/legal.component';
 import { BebesComponent } from './services/bebes/bebes.component';
-import { NewbornComponent } from './services/newborn/bebes.component';
+import { NewbornComponent } from './services/newborn/newborn.component';
 import { ComunionComponent } from './services/comunion/comunion.component';
 import { FamiliasComponent } from './services/familias/familias.component';
 import { IndividualComponent } from './services/individual/individual.component';

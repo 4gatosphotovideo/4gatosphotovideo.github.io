@@ -22,7 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { SessionPageComponent } from './session-page/session-page.component';
 import { EmbarazoComponent } from './services/embarazo/embarazo.component';
 import { BebesComponent } from './services/bebes/bebes.component';
-import { NewbornComponent } from './services/newborn/bebes.component';
+import { NewbornComponent } from './services/newborn/newborn.component';
 import { ComunionComponent } from './services/comunion/comunion.component';
 import { FamiliasComponent } from './services/familias/familias.component';
 import { IndividualComponent } from './services/individual/individual.component';

@@ -47,6 +47,8 @@ export class GalleryPhotoComponent implements AfterViewInit {
       thumbnailAlignment: "center",
       thumbnailDisplayTransitionDuration: 0,
       thumbnailDisplayTransition: "fadeIn",
+      thumbnailGutterWidth: 10,
+      thumbnailGutterHeight: 10,
       displayBreadcrumb: false,
       thumbnailOpenImage: true,
       viewerTools: {
