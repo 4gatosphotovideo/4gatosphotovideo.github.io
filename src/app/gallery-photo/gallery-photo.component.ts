@@ -30,14 +30,12 @@ export class GalleryPhotoComponent implements AfterViewInit {
       galleryFilterTags: false,
       eventsDebounceDelay: 0,
       locationHash: false,
-      thumbnailWidth: "200",
+      thumbnailWidth: "300",
       thumbnailHeight: "auto",
       thumbnailBorderVertical: 0,
       thumbnailBorderHorizontal: 0,
-      thumbnailDisplayTransition: "scaleUp",
       thumbnailDisplayOutsideScreen: true,
       gallerySorting: "random",
-      thumbnailDisplayTransitionDuration: 500,
       galleryTheme: {
         navigationFilter: { color: '#222', background: '#FFF', colorSelected: '#fff', backgroundSelected: '#18d26e', borderRadius: '4px' },
       },
@@ -61,16 +59,6 @@ export class GalleryPhotoComponent implements AfterViewInit {
         navigationFilterSelected: ''
       }
     });
-
-    // Workaround
-    // Gallery not shown until scroll
-    let timeout;
-    if (!timeout) {
-      timeout = setTimeout(() => {
-        window.scroll({ top: 1, left: 0, behavior: 'auto'});
-        timeout = null;
-      }, 320)
-    }
   }  
   
 }

@@ -28,6 +28,7 @@ import { FamiliasComponent } from './services/familias/familias.component';
 import { IndividualComponent } from './services/individual/individual.component';
 import { ServicesComponent } from './services/services.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { TruncateTextPipe } from './shared/pipe/TruncateTextPipe';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -65,6 +66,7 @@ const cookieConfig:NgcCookieConsentConfig = {
     ContactComponent,
     FooterComponent,
     ReplaceSpacesURL,
+    TruncateTextPipe,
     CookiePolicyComponent,
     LegalComponent,
     HomeComponent,

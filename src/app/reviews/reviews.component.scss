@@ -1,6 +1,7 @@
 .stars{
 	color: #d1bb3e;
     text-align: center;
+    padding: 1em;
 }
 
 .carousel-control-prev-icon {
@@ -30,8 +31,24 @@
     bottom: revert;
 }
 #reviews{
-    min-height: 550px;
+    .card{
+        border: solid 2px var(--green);
+    }
+    .card-body{
+        min-height: 20rem;
+        .card-link{
+            text-align: right;
+        }
+    }
 }
+@media (max-width: 768px){
+    #reviews{
+        .card-body{
+            min-height: 25rem;
+        }
+    }
+}
+
 .fa-quote-left, .fa-quote-right {
     padding: .3em;
     vertical-align: super;

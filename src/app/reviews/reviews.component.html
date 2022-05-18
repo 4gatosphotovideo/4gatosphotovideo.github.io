@@ -2,7 +2,6 @@
     <div class="container">
       <div class="section-header mb-5">
         <h3>Opiniones</h3>
-
         <div id="carouselReviews" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li
@@ -14,14 +13,21 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item" *ngFor="let review of reviewsData; let i = index" [class.active]="i == 0">
-              <p><a [href]="review.link" target="_blank">{{review.name}}</a></p>
-              <p>
-                  <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  {{review.text}}
-                  <i class="fa fa-quote-right" aria-hidden="true"></i>
-              </p>
-              <div class="stars">
-                  <i *ngFor="let in of counter(review.stars)" class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <div class="row align-items-center h-100">
+                <div class="col-6 mx-auto">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{review.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <div class="stars">
+                        <i *ngFor="let in of counter(review.stars)" class="fa fa-star fa-lg" aria-hidden="true"></i>
+                    </div>
+                    </h6>
+                    <p class="card-text mt-auto">{{ review.text | truncatetext:150 }}</p>
+                    <a [href]="review.link" target="_blank" class="card-link mt-auto">Ver opinión</a>
+                  </div>
+                </div>
+              </div>
               </div>
           </div>
           </div>
@@ -33,14 +39,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-        </div>
-
-        
-        
-        
-        
+        </div>   
       </div>
-  
-    
     </div>
   </section>

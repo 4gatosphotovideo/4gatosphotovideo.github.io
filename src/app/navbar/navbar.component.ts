@@ -76,7 +76,6 @@ export class NavbarComponent implements OnInit {
         .not('[href="#legal"]')
         .not('[href="#carouselReviews"]')
         .on('click', function (event) {
-          console.log("It has to scroll to " + this.hash)
           // Make sure this.hash has a value before overriding default behavior
           if (this.hash !== "") {
             var hash = this.hash;
