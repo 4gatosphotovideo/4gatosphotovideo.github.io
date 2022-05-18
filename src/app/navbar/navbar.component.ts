@@ -81,7 +81,7 @@ export class NavbarComponent implements OnInit {
           if (this.hash !== "") {
             var hash = this.hash;
             var scrollOffset = $(hash).data("scroll-offset") || 60;
-            $('html, body').animate({ scrollTop: $(hash).offset().top - scrollOffset }, 1200, 'easeInOutExpo');
+            $('html, body').animate({ scrollTop: $(hash).offset().top - scrollOffset }, 800, 'easeInOutExpo');
             return false;
           }
         });
