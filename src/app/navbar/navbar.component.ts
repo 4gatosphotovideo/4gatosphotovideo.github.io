@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
     {route: "individual", label:"Individual"},
   ]
 
-  headerScrolled: String = "";
+  isScrolled: Boolean = false;
   route: string = '';
 
   constructor(location: Location, router: Router) {
@@ -45,8 +45,9 @@ export class NavbarComponent implements OnInit {
 
   private checkNavbarStatus() {
     var isExpanded = ($(".navbar-toggler").attr("aria-expanded")) == 'true';
-    this.headerScrolled = (isExpanded || window.pageYOffset > 50) ? "scrolled" : "";
+    this.isScrolled = (isExpanded || window.pageYOffset > 50) ;
   }
+
 
 
   private initScrollAnimation(){

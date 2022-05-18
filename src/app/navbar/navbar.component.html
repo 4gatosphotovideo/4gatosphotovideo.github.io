@@ -1,6 +1,6 @@
 <nav
-  class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"
-  [ngClass]="headerScrolled"
+  class="navbar navbar-expand-md navbar-dark fixed-top"
+  [ngClass]="{'scrolled': isScrolled, 'transparent': route == 'home'}"
 >
   <a class="navbar-brand" href="#intro" [hidden]="route != 'home'">
     <img

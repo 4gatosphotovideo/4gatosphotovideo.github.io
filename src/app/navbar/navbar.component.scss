@@ -1,7 +1,10 @@
 .navbar {
-  background-color: var(--black-trans) !important;
+  background-color: var(--black-trans);
   transition: all 0.5s;
   padding: 0.5em 3em;
+}
+.transparent {
+  background-color: transparent !important;  
 }
 
 .navbar-brand > img {
