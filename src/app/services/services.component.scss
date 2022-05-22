@@ -22,3 +22,8 @@
       transition: .2s ease;
     }
   }
+  @media (max-width: 480px) {
+    .service-card{
+      width:12rem;
+    }
+  }

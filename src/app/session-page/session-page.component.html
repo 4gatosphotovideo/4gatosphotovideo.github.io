@@ -1,6 +1,6 @@
 <section [id]="data.title">
     
-<div class="col-m-11 m-5 pt-5 section-header">
+<div class="col-m-12 pt-5 section-header">
 
     <h3>{{data.title}}</h3>
 
@@ -35,6 +35,9 @@
             </ul>
             </div>
         </div>
+    </div>
+    <div *ngIf="!data.tariffs" class="row mt-5">
+        <p class=" mx-auto text-center">Contáctanos para obtener más información y precios de estas sesiones</p>
     </div>
     <div class="text-center">
         <a class="btn btn-success" target="blank"

@@ -1,6 +1,6 @@
 {
-    "name":"smashcake",
-    "title":"Sesiones smashcake",
+    "id":"cumples",
+    "title":"Sesiones de cumpleaños",
     "description":[
         "Las sesiones Smash Cake son una forma muy divertida de celebrar el primer añito (o incluso el segundo) de nuestro peque.",
         "Consta de dos partes: en la primera haremos fotos del peque con el pastel, observando qué hace, si lo toca, lo prueba o se dedica a restregarlo por todos sitios (esto es lo más diver de la sesión), la segunda, después del pringue, consiste en un bañito de espuma con agua caliente, para que se relaje y podamos limpiar cualquier resto de pastel que quede.",
@@ -10,5 +10,6 @@
         "<span class='font-weight-bold'>¿Qué traer a la sesión?</span><br/>Es importante traer las cositas de la higiene personal de nuestro pequeño: toalla, pañales y cremas corporales.",
         "<span class='font-weight-bold'>¿Está sesión siempre se realiza en estudio?</span><br/>Normalmente sí, pero si tu pequeño/a cumple el añito entre julio y agosto se puede mirar de hacerlo en exterior con todo el atrezzo necesario. Consultanos para pedir presupuesto.",
         "<span class='font-weight-bold'>Precios</span><br/>Contacta con nosotros para saber las nuevas tarifas."
-    ]
+    ],
+    "gallerySize": 10
 }

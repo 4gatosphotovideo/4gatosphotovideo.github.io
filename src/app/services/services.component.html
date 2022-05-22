@@ -11,16 +11,8 @@
               <img class="card-img-top img-fluid"
               src="assets/img/services/{{session.id|lowercase}}.jpg"
               alt="Card image cap" width="300" height="300">
-            
             <div class="card-body">
               <h5 class="card-title text-center">{{(session.thumbnailName?session.thumbnailName:session.id)|uppercase}}</h5>
-              <p *ngIf="session.tariffs" class="card-text">Desde <span class="price"
-                  [ngClass]="{'old-price':getMinPrice(session).offer}">{{getMinPrice(session).price}}€</span>
-                <span class="price" *ngIf="getMinPrice(session).offer"> {{getMinPrice(session).offer.price}}€</span>
-                <!-- <span class="offer-until" *ngIf="getMinPrice(session).offer">Promo hasta el
-                  {{getMinPrice(session).offer.until}}</span> -->
-              </p>
-              <p *ngIf="!session.tariffs" class="card-text price">&nbsp;</p>
             </div>
           </a>
           </div>
