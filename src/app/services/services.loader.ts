@@ -19,7 +19,7 @@ import { Session } from '../session-page/session';
 })
 export class ServicesLoader {
 
-  services: Session[] = [embarazo, newborn, bebes, cumples, individual, infantil, familias, comunion];
+  services: Session[] = [embarazo, newborn, bebes, cumples, individual, infantil, familias, comunion, bodas];
 
   constructor() { }
 }

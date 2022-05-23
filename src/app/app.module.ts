@@ -31,6 +31,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { TruncateTextPipe } from './shared/pipe/TruncateTextPipe';
 import { CumplesComponent } from './services/cumples/cumples.component';
 import { NavidadComponent } from './services/navidad/navidad.component';
+import { InfantilComponent } from './services/infantil/infantil.component';
+import { BodasComponent } from './services/bodas/bodas.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -82,7 +84,9 @@ const cookieConfig:NgcCookieConsentConfig = {
     IndividualComponent,
     ReviewsComponent,
     CumplesComponent,
-    NavidadComponent
+    NavidadComponent,
+    InfantilComponent,
+    BodasComponent
   ],
   imports: [
     BrowserModule,
