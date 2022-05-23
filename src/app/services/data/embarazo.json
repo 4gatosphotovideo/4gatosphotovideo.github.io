@@ -1,5 +1,5 @@
 {
-    "name":"embarazo",
+    "id":"embarazo",
     "title":"Sesiones de embarazo",
     "description":[
         "<span class='font-weight-bold'>La espera más dulce</span>",
@@ -13,12 +13,14 @@
     ],
     "tariffs": [
         {
-            "name": "Embarazo",
+            "id": "embarazo-digital",
+            "name": "Digital",
             "features": [
                 "Duración: 1h",
                 "20 fotos digitales"
             ],
             "price": 90
         }
-    ]
+    ],
+    "gallerySize": 11
 }

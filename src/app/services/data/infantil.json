@@ -1,5 +1,5 @@
 {
-    "name":"infantil",
+    "id":"infantil",
     "title":"Sesiones infantiles",
     "description":[
         "<span class='font-weight-bold text-center'>¿Qué momento de la vida no es bueno para fotografiar a los peques?</span>",
@@ -8,6 +8,7 @@
     ],
     "tariffs": [
         {
+            "id": "infantil-digital",
             "name": "Digital",
             "features": [
                 "Duración: 30 min",
@@ -15,5 +16,6 @@
             ],
             "price": 75
         }
-    ]
+    ],
+    "gallerySize": 5
 }

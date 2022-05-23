@@ -1,0 +1,49 @@
+<section [id]="data.title">
+    
+<div class="col-m-12 pt-5 section-header">
+
+    <h3>{{data.title}}</h3>
+
+    <div class="col-9 mx-auto mb-5">
+        <p class="text-justify" *ngFor="let desc of data.description" [innerHTML]="desc"></p>
+    </div>
+
+    <app-gallery-photo [galleryData]="galleryData" ></app-gallery-photo>
+
+    <h3 *ngIf="data.tariffs">Tarifas</h3>
+
+    <div *ngIf="data.tariffs" class="row mt-5">
+        <div [class]="'col-md-'+(12/data.tariffs.length)" *ngFor="let tariff of data.tariffs">
+            <div class="card tariff-card">            
+            <div class="card-header price-tariff-header">
+                {{tariff.name}}
+            </div>
+            <div class="card-header price-tariff-amount">
+                <span class="price-tariff" [ngClass]="{'with-offer':tariff.offer}">
+                    <span *ngIf="tariff.offer" class="old-price">{{tariff.price}}</span>
+                    {{tariff.offer?tariff.offer.price:tariff.price}}<span class="eur">€</span>
+                </span>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-center">
+                <ul class="price-tariff-details text-left">
+                    <h5>Incluye:</h5>
+                    <li *ngFor="let feature of tariff.features">{{feature}}</li>
+                </ul>
+                <span *ngIf="tariff.offer" class="offer-until">Oferta hasta el {{tariff.offer.until}}</span>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!data.tariffs" class="row mt-5">
+        <p class=" mx-auto text-center">Contáctanos para obtener más información y precios de estas sesiones</p>
+    </div>
+    <div class="text-center">
+        <a class="btn btn-success" target="blank"
+            href="https://api.whatsapp.com/send?phone=34600688860&text={{whatsAppMessage + data.title | replaceSpacesURL }}">
+            Contacta por WhatsApp<fa-icon [icon]="faWhatsapp" class="ml-2"></fa-icon>
+        </a>
+    </div>
+</div>
+</section>

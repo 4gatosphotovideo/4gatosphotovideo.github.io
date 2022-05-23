@@ -1,0 +1,45 @@
+<section id="reviews">
+    <div class="container">
+      <div class="section-header mb-5">
+        <h3>Opiniones</h3>
+        <div id="carouselReviews" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li
+              *ngFor="let review of reviewsData; let i = index"
+              data-target="#carouselReviews"
+              [attr.data-slide-to]="i"
+              [class.active]="i == 0">
+            ></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item" *ngFor="let review of reviewsData; let i = index" [class.active]="i == 0">
+              <div class="row align-items-center h-100">
+                <div class="col-8 mx-auto">
+                <div class="card">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{review.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <div class="stars">
+                        <i *ngFor="let in of counter(review.stars)" class="fa fa-star fa-lg" aria-hidden="true"></i>
+                    </div>
+                    </h6>
+                    <p class="card-text mt-auto">{{ review.text | truncatetext:180 }}</p>
+                    <a [href]="review.link" target="_blank" class="card-link mt-auto">Ver opinión</a>
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselReviews" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselReviews" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>   
+      </div>
+    </div>
+  </section>

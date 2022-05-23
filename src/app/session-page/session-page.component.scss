@@ -1,0 +1,108 @@
+  .tariff-card {
+    width: 25rem;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 30px;
+    .card-header {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .offer-until {
+      position: absolute;
+      line-height: 0px;
+      margin-left: -5em;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+  }
+  
+  .price {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .old-price {
+    color: red;
+    text-decoration: line-through;
+    vertical-align: top;
+  }
+
+  .price-tariff-title {
+    text-align: center;
+    background: var(--green);
+    padding: 0 10px;
+    line-height: 0.05em;
+    span {
+      text-align: center;
+      background: #fff;
+      padding: 0 10px;
+    }
+  }
+
+  .price-tariff-amount{
+    text-align: center;
+    padding: 0px;
+  }
+  
+  .price-details-body {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .price-tariff {
+    font-size: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    .old-price {
+      font-size: 0.5em;
+    }
+    .eur{
+      font-size: 0.6em;
+      margin-left: .2em;
+      vertical-align: super;
+    }
+  }
+  .price-tariff.with-offer {
+    padding-top: 0;
+  }
+  
+  .price-tariff-title {
+    text-align: center;
+    background: #b5e6a2;
+    padding: 0 10px;
+    line-height: 0.05em;
+  }
+  .price-tariff-title span {
+    text-align: center;
+    background: #fff;
+    padding: 0 10px;
+  }
+  
+  .price-tariff-header {
+    background: #b5e6a2;
+    font-weight: bolder;
+    font-size: 1.5em;
+    padding:0.75rem .4rem;
+  }
+  
+  .price-tariff-details {
+    padding: 1.5em 0.5em;
+    font-size: small;
+    height: 10em;
+  }
+  
+  .offer-until {
+    font-size: 0.8em;
+    color: red;
+  }
+  
+  @media(max-width: 500px){
+    .tariff-card {
+      width: 18rem;
+    }
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 991px) { 
+    .tariff-card {
+      width: 20rem;
+    }
+  }

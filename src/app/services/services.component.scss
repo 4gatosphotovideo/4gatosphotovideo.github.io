@@ -1,0 +1,29 @@
+#services{
+    background-color: var(--green);   
+}
+.service-card {
+    max-width: 18rem;
+    min-width: 12rem;
+    transition: .2s ease;
+    box-shadow: 0 0 15px 0 rgb(100 100 100 / 80%);
+    a{
+      text-decoration: none;
+      color:initial;
+    }
+    img{
+      transition: .2s ease;
+    }
+  }
+  .service-card:hover{
+    transform: scale(1.02);
+    transition: .2s ease;
+    img{
+      opacity: 0.7;
+      transition: .2s ease;
+    }
+  }
+  @media (max-width: 480px) {
+    .service-card{
+      width:12rem;
+    }
+  }

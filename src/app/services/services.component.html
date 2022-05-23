@@ -1,12 +1,25 @@
 <section id="services">
   <div class="container">
-    <div class="section-header">
-      <h3>SERVICIOS</h3>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 mb-5" *ngFor="let service of services">
-        <app-tariff [service]="service"></app-tariff>
+    <div class="section-header mb-5">
+      <h3>Sesiones</h3>
       </div>
-    </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-5" *ngFor="let session of sessions">
+          <div class="card service-card mx-auto">
+            <a [routerLink]="[session.id]">
+              <img class="card-img-top img-fluid"
+              src="assets/img/services/{{session.id|lowercase}}.jpg"
+              alt="Card image cap" width="300" height="300">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{(session.thumbnailName?session.thumbnailName:session.id)|uppercase}}</h5>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+
+
+  
   </div>
 </section>

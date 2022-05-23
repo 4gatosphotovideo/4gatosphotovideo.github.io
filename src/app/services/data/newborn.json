@@ -1,5 +1,5 @@
 {
-    "name":"newborn",
+    "id":"newborn",
     "title":"Sesiones Newborn",
     "description":[
         "<strong>No hay nada más tierno que los primeros días de vida de nuestro bebé</strong>",
@@ -12,6 +12,7 @@
     ],
     "tariffs": [
         {
+            "id":"newborn-digital",
             "name": "Digital",
             "features": [
                 "Duración: 2h - 3h",
@@ -20,5 +21,6 @@
             ],
             "price": 180
         }
-    ]
+    ],
+    "gallerySize": 12
 }

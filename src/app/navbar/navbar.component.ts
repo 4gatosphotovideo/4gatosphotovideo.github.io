@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 // jQuery
 declare var $: any;
@@ -10,56 +12,30 @@ declare var $: any;
 })
 export class NavbarComponent implements OnInit {
 
-  headerScrolled: String = "";
+  services: Array<{route: string, label: string}> = [
+    {route: "bebes", label:"Bebés"},
+    {route: "newborn", label:"Newborn"},
+    {route: "embarazo", label:"Embarazo"},
+    {route: "comunion", label:"Comunión"},
+    {route: "familias", label:"Familias"},
+    {route: "individual", label:"Individual"},
+  ]
 
-  constructor() { }
+  isScrolled: Boolean = false;
+  route: string = '';
 
-  ngOnInit(): void {
-
-    $(window).on("load", function () {
-
-      var urlHash = window.location.href.split("#")[1];
-
-      if (urlHash && $('#' + urlHash).length) {
-        $('html,body').animate({
-          scrollTop: $('#' + urlHash).offset().top - 60
-        }, 1200, 'easeInOutExpo');
-
+  constructor(location: Location, router: Router) {
+    router.events.subscribe((val) => {
+      if(location.path() != ''){
+        this.route = location.path();
       } else {
-        var serviceModalId = "#modal" + urlHash;
-        if ($(serviceModalId).length) {
-          $(serviceModalId).modal('show');
-        }
+        this.route = 'home'
       }
-      history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
     });
-
-    $('.arrow>a, .navbar-brand, .nav-link:not(.dropdown-toggle)').on('click', function () {
-      $('.navbar-collapse').collapse('hide');
-      $('.dropdown-menu').collapse('hide');
-    });
-
-    $('.navbar-toggler').on('click', function () {
-      var isExpanded = ($(".navbar-toggler").attr("aria-expanded")) == 'false';
-      if (isExpanded) $(".navbar").addClass("scrolled");
-      else if (!(window.pageYOffset > 50)) $(".navbar").removeClass("scrolled");
-    });
-
-    $('a[href*="#"]')
-      // Remove links that don't actually link to anything
-      .not('[href="#"]')
-      .not('[href="#0"]')
-      .not('[href="#cookie"]')
-      .not('[href="#legal"]')
-      .on('click', function (event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          var hash = this.hash;
-          var scrollOffset = $(hash).data("scroll-offset") || 60;
-          $('html, body').animate({ scrollTop: $(hash).offset().top - scrollOffset }, 1200, 'easeInOutExpo');
-          return false;
-        }
-      });
+  }
+ 
+  ngOnInit(): void {
+    this.initScrollAnimation();
   }
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
@@ -69,7 +45,47 @@ export class NavbarComponent implements OnInit {
 
   private checkNavbarStatus() {
     var isExpanded = ($(".navbar-toggler").attr("aria-expanded")) == 'true';
-    this.headerScrolled = (isExpanded || window.pageYOffset > 50) ? "scrolled" : "";
+    this.isScrolled = (isExpanded || window.pageYOffset > 50) ;
+  }
+
+
+
+  private initScrollAnimation(){
+
+      $('.navbar-brand').on('click',function(){
+        $('.navbar-collapse').collapse('hide');
+        $('.dropdown-menu').collapse('hide');
+        return false;
+      });
+
+      $('.nav-link:not(.dropdown-toggle)').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
+        $('.dropdown-menu').collapse('hide');
+      });
+  
+      $('.navbar-toggler').on('click', function () {
+        var isExpanded = ($(".navbar-toggler").attr("aria-expanded")) == 'false';
+        if (isExpanded) $(".navbar").addClass("scrolled");
+        else if (!(window.pageYOffset > 50)) $(".navbar").removeClass("scrolled");
+      });
+  
+      $('a[href*="#"]')
+        // Remove links to different routes
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .not('[href="#cookie"]')
+        .not('[href="#legal"]')
+        .not('[href="#carouselReviews"]')
+        .on('click', function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            var hash = this.hash;
+            var scrollOffset = $(hash).data("scroll-offset") || 60;
+            $('html, body').animate({ scrollTop: $(hash).offset().top - scrollOffset }, 800, 'easeInOutExpo');
+            return false;
+          }
+        });
+
   }
 
 }

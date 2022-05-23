@@ -15,7 +15,7 @@ export class GalleryVideoComponent implements OnInit, OnDestroy {
   private statusChangeSubscription: Subscription;
 
   constructor(private ccService: NgcCookieConsentService) {
-    console.log
+
   }
 
   videos = [

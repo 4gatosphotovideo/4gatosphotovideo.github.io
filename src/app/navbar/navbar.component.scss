@@ -1,9 +1,14 @@
 .navbar {
-  background-color: transparent !important;
+  background-color: var(--black-trans);
   transition: all 0.5s;
   padding: 0.5em 3em;
 }
-
+.transparent {
+  background-color: transparent !important;  
+}
+.navbar-brand {
+  margin-right: revert;
+}
 .navbar-brand > img {
   height: 50px;
   transition: all 0.5s;
@@ -27,13 +32,17 @@
   left: auto !important;
   right: 0px;
   text-align: center;
-  background-color: transparent;
+  background-color: var(--black-trans);
 }
 .dropdown-item,
-.dropdown-item:hover,
 .dropdown-item:focus {
-  color: white !important;
-  background-color: transparent !important;
+  color: white;
+  transition: all 0.5s;
+}
+
+.dropdown-item:hover{
+  color: black !important;
+  background-color: var(--green);
 }
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
@@ -47,13 +56,10 @@
   .dropdown-menu {
     min-width: 5em;
     margin-top: 0.1em;
-    // box-shadow: 1px 1px 5px;
-    background-color: var(--green);
   }
   .scrolled {
     .dropdown-menu {
       margin-top: 0.75em;
-      // box-shadow: 1px 1px 5px;
       background-color: var(--black-trans);
     }
   }

@@ -1,5 +1,5 @@
 {
-    "name":"individual",
+    "id":"individual",
     "title":"Sesiones individuales",
     "description":[
         "Nuestra imagen es importante para muchas cosas y es probable que durante nuestra vida necesitemos un reportaje fotográfico para nosotros mismos.",
@@ -7,6 +7,7 @@
     ],
     "tariffs": [
         {
+            "id": "individual-digital",
             "name": "Digital",
             "features": [
                 "Duración: 30 min",
@@ -14,5 +15,6 @@
             ],
             "price": 60
         }
-    ]
+    ],
+    "gallerySize": 7
 }

@@ -1,5 +1,5 @@
 {
-    "name": "bebes",
+    "id": "bebes",
     "thumbnailName": "bebés",
     "title": "Sesiones para bebés",
     "description": [
@@ -9,6 +9,7 @@
     ],
     "tariffs": [
         {
+            "id": "bebes-digital",
             "name": "Digital",
             "features": [
                 "Duración: 30 min",
@@ -16,5 +17,6 @@
             ],
             "price": 80
         }
-    ]
+    ],
+    "gallerySize": 8
 }

@@ -14,12 +14,25 @@ import { GalleryVideoComponent } from './gallery-video/gallery-video.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
-import { TariffComponent } from './services/tariff/tariff.component';
-import { ServicesComponent } from './services/services.component';
+import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 import { ReplaceSpacesURL } from './shared/pipe/ReplaceSpacesURL';
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { LegalComponent } from './legal/legal.component';
+import { HomeComponent } from './home/home.component';
+import { SessionPageComponent } from './session-page/session-page.component';
+import { EmbarazoComponent } from './services/embarazo/embarazo.component';
+import { BebesComponent } from './services/bebes/bebes.component';
+import { NewbornComponent } from './services/newborn/newborn.component';
+import { ComunionComponent } from './services/comunion/comunion.component';
+import { FamiliasComponent } from './services/familias/familias.component';
+import { IndividualComponent } from './services/individual/individual.component';
+import { ServicesComponent } from './services/services.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { TruncateTextPipe } from './shared/pipe/TruncateTextPipe';
+import { CumplesComponent } from './services/cumples/cumples.component';
+import { NavidadComponent } from './services/navidad/navidad.component';
+import { InfantilComponent } from './services/infantil/infantil.component';
+import { BodasComponent } from './services/bodas/bodas.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -40,7 +53,7 @@ const cookieConfig:NgcCookieConsentConfig = {
     deny: "No quiero",
     allow: "Aceptar",
     link: "política de cookies",
-    href: "#cookie",
+    href: "cookies",
     policy:"<i class=\"fas fa-cookie-bite fa-lg\" title=\"Cookies\"></i>",
     target: "_self"
   }
@@ -54,13 +67,26 @@ const cookieConfig:NgcCookieConsentConfig = {
     AboutComponent,
     GalleryPhotoComponent,
     GalleryVideoComponent,
-    ServicesComponent,
     ContactComponent,
     FooterComponent,
-    TariffComponent,
     ReplaceSpacesURL,
+    TruncateTextPipe,
     CookiePolicyComponent,
-    LegalComponent
+    LegalComponent,
+    HomeComponent,
+    ServicesComponent,
+    SessionPageComponent,
+    EmbarazoComponent,
+    BebesComponent,
+    NewbornComponent,
+    ComunionComponent,
+    FamiliasComponent,
+    IndividualComponent,
+    ReviewsComponent,
+    CumplesComponent,
+    NavidadComponent,
+    InfantilComponent,
+    BodasComponent
   ],
   imports: [
     BrowserModule,

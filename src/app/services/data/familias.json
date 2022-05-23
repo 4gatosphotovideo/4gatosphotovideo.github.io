@@ -1,5 +1,5 @@
 {
-    "name":"familias",
+    "id":"familias",
     "title":"Sesiones en familia",
     "description":[
         "Siempre es un buen momento para hacer un reportaje familiar, si empieza el buen tiempo lo podemos realizar en exterior y si nos encontramos en temporada de frío, en estudio.",
@@ -7,6 +7,7 @@
     ],
     "tariffs": [
         {
+            "id": "familias-digital",
             "name": "Digital",
             "features": [
                 "Duración: 30 min",
@@ -14,5 +15,6 @@
             ],
             "price": 75
         }
-    ]
+    ],
+    "gallerySize": 7
 }
