@@ -2,7 +2,7 @@
     
 <div class="col-m-12 pt-5 section-header">
 
-    <h3>{{data.title}}</h3>
+    <h3 class="m-3">{{data.title}}</h3>
 
     <div class="col-9 mx-auto mb-5">
         <p class="text-justify" *ngFor="let desc of data.description" [innerHTML]="desc"></p>
@@ -12,7 +12,7 @@
 
     <h3 *ngIf="data.tariffs">Tarifas</h3>
 
-    <div *ngIf="data.tariffs" class="row mt-5">
+    <div *ngIf="data.tariffs" class="mt-5">
         <div [class]="'col-md-'+(12/data.tariffs.length)" *ngFor="let tariff of data.tariffs">
             <div class="card tariff-card">            
             <div class="card-header price-tariff-header">
@@ -36,7 +36,7 @@
             </div>
         </div>
     </div>
-    <div *ngIf="!data.tariffs" class="row mt-5">
+    <div *ngIf="!data.tariffs" class="m-5">
         <p class=" mx-auto text-center">Contáctanos para obtener más información y precios de estas sesiones</p>
     </div>
     <div class="text-center">
