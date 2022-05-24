@@ -68,6 +68,8 @@ export class AppComponent implements OnInit, OnDestroy{
         filter((e: Event): e is RouterEvent => e instanceof NavigationStart)
       ).subscribe((e: NavigationStart) => {
         if(e.url=='/'){
+          // Close fullscreen gallery if opened
+          $('.nGY2Icon-ngy2_close2').click();
           setTimeout(() => {
             window.scroll(0,this.scrollPosition)        
           }, 1);
