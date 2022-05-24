@@ -3,6 +3,10 @@ import { NgcCookieConsentService, NgcStatusChangeEvent } from 'ngx-cookieconsent
 import { Subscription } from 'rxjs';
 import { faEnvelope as faCookie } from '@fortawesome/free-solid-svg-icons';
 import { environment } from 'src/environments/environment';
+import {Event, RouterEvent, Router, NavigationStart} from '@angular/router';
+import { filter } from 'rxjs/operators';
+
+
 import {
   transition,
   trigger,
@@ -33,17 +37,19 @@ declare var gtag: any;
         )
       ])
     ])
-    
-      ] // register the animations
+  ]
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit, OnDestroy{
 
   title = '4gatosphotovideo';
   faCookie = faCookie;
   //keep refs to subscriptions to be able to unsubscribe later
   private statusChangeSubscription: Subscription;
+  private scrollPosition: number;
 
-  constructor(private ccService: NgcCookieConsentService) { }
+  constructor(
+    private ccService: NgcCookieConsentService, 
+    private router: Router) { }
 
   ngOnInit(): void {
 
@@ -58,6 +64,18 @@ export class AppComponent implements OnInit, OnDestroy {
         }
       });
 
+      this.router.events.pipe(
+        filter((e: Event): e is RouterEvent => e instanceof NavigationStart)
+      ).subscribe((e: NavigationStart) => {
+        if(e.url=='/'){
+          setTimeout(() => {
+            window.scroll(0,this.scrollPosition)        
+          }, 1);
+        }else{
+          this.scrollPosition = window.scrollY;
+        }
+     });
+     
   }
   ngOnDestroy(): void {
     // unsubscribe to cookieconsent observables to prevent memory leaks
@@ -68,8 +86,6 @@ export class AppComponent implements OnInit, OnDestroy {
     if (environment.production) {
       gtag('config', 'UA-155184351-1');
     }
-
   }
-
 
 }
