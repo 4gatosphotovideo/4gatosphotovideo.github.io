@@ -28,7 +28,6 @@ export class GalleryPhotoComponent implements AfterViewInit {
     $("#nanogallery-photos-"+this.galleryData.id).nanogallery2({
       items: this.pictures,
       galleryFilterTags: false,
-      eventsDebounceDelay: 0,
       locationHash: false,
       thumbnailWidth: "300",
       thumbnailHeight: "auto",
