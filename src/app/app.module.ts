@@ -33,6 +33,8 @@ import { CumplesComponent } from './services/cumples/cumples.component';
 import { NavidadComponent } from './services/navidad/navidad.component';
 import { InfantilComponent } from './services/infantil/infantil.component';
 import { BodasComponent } from './services/bodas/bodas.component';
+import { AuthModule } from '@auth0/auth0-angular';
+import { ClientesComponent } from './clientes/clientes.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -86,7 +88,8 @@ const cookieConfig:NgcCookieConsentConfig = {
     CumplesComponent,
     NavidadComponent,
     InfantilComponent,
-    BodasComponent
+    BodasComponent,
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
@@ -95,7 +98,13 @@ const cookieConfig:NgcCookieConsentConfig = {
     ReactiveFormsModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    NgcCookieConsentModule.forRoot(cookieConfig)
+    NgcCookieConsentModule.forRoot(cookieConfig),
+    AuthModule.forRoot({
+      domain: '4gatosphotovideo.eu.auth0.com',
+      clientId: 'NOJQHZmJyty4ZvMXebzeqDcLrXn7bAah',
+      cacheLocation: 'localstorage',
+      useRefreshTokens: true
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

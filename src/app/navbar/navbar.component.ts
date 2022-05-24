@@ -1,6 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '@auth0/auth0-angular';
 
 // jQuery
 declare var $: any;
@@ -24,7 +25,7 @@ export class NavbarComponent implements OnInit {
   isScrolled: Boolean = false;
   route: string = '';
 
-  constructor(location: Location, router: Router) {
+  constructor(location: Location, router: Router, public auth: AuthService) {
     router.events.subscribe((val) => {
       if(location.path() != ''){
         this.route = location.path();

@@ -13,6 +13,7 @@ import { CumplesComponent } from './services/cumples/cumples.component';
 import { NavidadComponent } from './services/navidad/navidad.component';
 import { InfantilComponent } from './services/infantil/infantil.component';
 import { BodasComponent } from './services/bodas/bodas.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'navidad', component: NavidadComponent },
   { path: 'infantil', component: InfantilComponent },
   { path: 'bodas', component: BodasComponent },
+  { path: 'clientes', component: ClientesComponent },
 ];
 
 @NgModule({
