@@ -52,8 +52,13 @@
       </li>
 
       <li class="nav-item active">
-        <a *ngIf="!auth.isAuthenticated$" class="nav-link" role="button" (click)="auth.loginWithRedirect()">Zona Clientes</a>
-        <a *ngIf="auth.isAuthenticated$" class="nav-link" role="button" (click)="auth.loginWithRedirect()">Logout</a>
+        <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+          <a class="nav-link" role="button" (click)="auth.logout({ returnTo: location.origin })">Logout</a>
+        </ng-container>
+        <ng-template #loggedOut>
+          <a class="nav-link" role="button" (click)="auth.loginWithRedirect()">Zona Clientes</a>
+          </ng-template>
+        
       </li>
     </ul>
   </div>

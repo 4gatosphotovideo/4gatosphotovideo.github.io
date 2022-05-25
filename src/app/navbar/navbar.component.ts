@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
   isScrolled: Boolean = false;
   route: string = '';
 
-  constructor(location: Location, router: Router, public auth: AuthService) {
+  constructor(public location: Location, router: Router, public auth: AuthService) {
     router.events.subscribe((val) => {
       if(location.path() != ''){
         this.route = location.path();
